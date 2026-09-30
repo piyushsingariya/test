@@ -1,280 +1,325 @@
 <template data-screen="visitor/design" data-title="Design language">
-  <div class="page">
-    <section class="section">
-      <p class="eyebrow">Reference</p>
-      <h1 class="title">Vendi's design language</h1>
-      <p class="lede">Warm paper, deep ink, one indigo accent. Vendi is a coworker, not a chatbot: the screens read like a well-set document, and the only saturated colour on a screen is the thing you are meant to act on. Slack's own colours are kept in a separate set, so Vendi's surfaces and Slack's never blur into each other.</p>
-    </section>
+  <div class="site">
+    <a class="skip" href="#main">Skip to content</a>
 
-    <section class="section section-sunken">
-      <h2 class="title">Colour</h2>
-      <p class="lede">Every colour on every screen is one of these. No screen uses a colour that is not named here.</p>
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="#/visitor/home">
+          <span class="brand-name">Piyush Singariya</span>
+          <span class="brand-role">Software engineer &middot; exploring entrepreneurship</span>
+        </a>
 
-      <h3 class="card-title mt-lg">Paper and ink</h3>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-bg"></div>
-          <div class="swatch-body"><span class="token">--color-bg</span><span class="swatch-use">Behind everything</span></div>
+        <nav class="nav-wide" aria-label="Main">
+          <a class="nav-link" href="#/visitor/work">Work</a>
+          <a class="nav-link" href="#/visitor/open-source">Open source</a>
+          <a class="nav-link" href="#/visitor/career">Career</a>
+          <a class="nav-link" href="#/visitor/skills">Skills</a>
+          <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+          <a class="nav-link" href="#/visitor/about">About</a>
+          <a class="nav-link" href="#/visitor/contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary head-cta" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+
+        <details class="menu">
+          <summary class="menu-button">Menu <span aria-hidden="true">&#9662;</span></summary>
+          <nav class="menu-panel" aria-label="Main, narrow screens">
+            <a class="nav-link" href="#/visitor/work">Work</a>
+            <a class="nav-link" href="#/visitor/open-source">Open source</a>
+            <a class="nav-link" href="#/visitor/career">Career</a>
+            <a class="nav-link" href="#/visitor/skills">Skills</a>
+            <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+            <a class="nav-link" href="#/visitor/about">About</a>
+            <a class="nav-link" href="#/visitor/contact">Contact</a>
+            <a class="btn btn-primary" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <section class="section">
+        <div class="wrap">
+          <p class="eyebrow">Design language</p>
+          <h1 class="h1">Every later screen is drawn from this page.</h1>
+          <p class="lede">Warm paper, near-black ink and one burnt-orange accent. A serif for headings so the work reads like an editorial page; a system sans for everything you have to read quickly. Set once here, reused everywhere.</p>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-surface"></div>
-          <div class="swatch-body"><span class="token">--color-surface</span><span class="swatch-use">Cards, panels, pages</span></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <h2 class="h2">Type scale</h2>
+          <div style="margin-top: var(--space-lg);">
+            <div class="spec-row"><span class="spec-name">--font-size-4xl / 52px</span><p class="display">Display — the opening line</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-3xl / 38px</span><p class="h1">Heading 1 — a page title</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-2xl / 28px</span><p class="h2">Heading 2 — a section</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-xl / 22px</span><p class="h3">Heading 3 — a card or a role</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-lg / 18px</span><p class="lede" style="margin-top: 0;">Lede — the sentence under a heading</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-md / 16px</span><p>Body — the size everything is read at.</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-sm / 14px</span><p class="meta">Meta — dates, roles, captions.</p></div>
+            <div class="spec-row"><span class="spec-name">--font-size-xs / 13px</span><p><span class="tag">Tag</span> <span class="sample">Label</span> — the smallest size on the site, used only for tags and labels.</p></div>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-sunken"></div>
-          <div class="swatch-body"><span class="token">--color-surface-sunken</span><span class="swatch-use">A section set back</span></div>
+      </section>
+
+      <section class="section section-sunken">
+        <div class="wrap">
+          <h2 class="h2">Colour</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">Ink on paper meets normal contrast levels. The accent carries actions; the blue carries focus, so focus never hides inside a hover.</p>
+          <div class="swatch-grid" style="margin-top: var(--space-lg);">
+            <div class="swatch"><div class="swatch-chip chip-bg"></div><div class="swatch-body"><p class="swatch-name">--color-bg</p><p class="swatch-use">Page</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-surface"></div><div class="swatch-body"><p class="swatch-name">--color-surface</p><p class="swatch-use">Cards, inputs</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-sunken"></div><div class="swatch-body"><p class="swatch-name">--color-surface-sunken</p><p class="swatch-use">Banded sections</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-line"></div><div class="swatch-body"><p class="swatch-name">--color-line</p><p class="swatch-use">Borders, rules</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-ink"></div><div class="swatch-body"><p class="swatch-name">--color-ink</p><p class="swatch-use">Headings, body</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-ink-soft"></div><div class="swatch-body"><p class="swatch-name">--color-ink-soft</p><p class="swatch-use">Secondary text</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-ink-faint"></div><div class="swatch-body"><p class="swatch-name">--color-ink-faint</p><p class="swatch-use">Meta text</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-dark"></div><div class="swatch-body"><p class="swatch-name">--color-dark</p><p class="swatch-use">Footer</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-accent"></div><div class="swatch-body"><p class="swatch-name">--color-accent</p><p class="swatch-use">Primary action</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-accent-ink"></div><div class="swatch-body"><p class="swatch-name">--color-accent-ink</p><p class="swatch-use">Links, hover</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-accent-soft"></div><div class="swatch-body"><p class="swatch-name">--color-accent-soft</p><p class="swatch-use">Accent fill</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-focus"></div><div class="swatch-body"><p class="swatch-name">--color-focus</p><p class="swatch-use">Focus ring</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-good"></div><div class="swatch-body"><p class="swatch-name">--color-good</p><p class="swatch-use">Sent, confirmed</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-fake"></div><div class="swatch-body"><p class="swatch-name">--color-fake</p><p class="swatch-use">Sample labels</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-disabled"></div><div class="swatch-body"><p class="swatch-name">--color-disabled</p><p class="swatch-use">Disabled</p></div></div>
+            <div class="swatch"><div class="swatch-chip chip-ink" style="background: var(--color-line-strong);"></div><div class="swatch-body"><p class="swatch-name">--color-line-strong</p><p class="swatch-use">Input borders</p></div></div>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-line"></div>
-          <div class="swatch-body"><span class="token">--color-line</span><span class="swatch-use">Every border</span></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <h2 class="h2">Spacing</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">Ten steps. Nothing on the site uses a gap that is not one of them.</p>
+          <div style="margin-top: var(--space-lg);">
+            <div class="spec-row"><span class="spec-name">--space-3xs / 2px</span><div class="space-bar w-3xs"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-2xs / 4px</span><div class="space-bar w-2xs"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-xs / 8px</span><div class="space-bar w-xs"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-sm / 12px</span><div class="space-bar w-sm"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-md / 16px</span><div class="space-bar w-md"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-lg / 24px</span><div class="space-bar w-lg"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-xl / 32px</span><div class="space-bar w-xl"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-2xl / 48px</span><div class="space-bar w-2xl"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-3xl / 72px</span><div class="space-bar w-3xl"></div></div>
+            <div class="spec-row"><span class="spec-name">--space-4xl / 104px</span><div class="space-bar w-4xl"></div></div>
+          </div>
+
+          <hr class="rule">
+
+          <h2 class="h2">Corners and shadow</h2>
+          <div class="grid-2" style="margin-top: var(--space-lg);">
+            <div class="stack">
+              <div class="radius-box r-xs"></div><p class="state-name">--radius-xs</p>
+              <div class="radius-box r-sm"></div><p class="state-name">--radius-sm · buttons, inputs</p>
+              <div class="radius-box r-md"></div><p class="state-name">--radius-md · cards, images</p>
+              <div class="radius-box r-lg"></div><p class="state-name">--radius-lg</p>
+              <div class="radius-box r-pill"></div><p class="state-name">--radius-pill · tags</p>
+            </div>
+            <div class="stack">
+              <div class="shadow-box s-sm"></div><p class="state-name">--shadow-sm · card at rest</p>
+              <div class="shadow-box s-md"></div><p class="state-name">--shadow-md · card on hover</p>
+              <div class="shadow-box s-lg"></div><p class="state-name">--shadow-lg · menu over the page</p>
+            </div>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink"></div>
-          <div class="swatch-body"><span class="token">--color-ink</span><span class="swatch-use">Headings and body</span></div>
+      </section>
+
+      <section class="section section-sunken">
+        <div class="wrap">
+          <h2 class="h2">Buttons</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">Every state, shown at once. Each one is at least 44px tall, so it is reachable by thumb.</p>
+
+          <h3 class="h4" style="margin-top: var(--space-lg);">Primary</h3>
+          <div class="state-grid" style="margin-top: var(--space-md);">
+            <div class="state-cell"><a class="btn btn-primary" href="#/visitor/contact">Get in touch</a><span class="state-name">default</span></div>
+            <div class="state-cell"><a class="btn btn-primary is-hover" href="#/visitor/contact">Get in touch</a><span class="state-name">hover</span></div>
+            <div class="state-cell"><a class="btn btn-primary is-focus" href="#/visitor/contact">Get in touch</a><span class="state-name">focus</span></div>
+            <div class="state-cell"><a class="btn btn-primary is-active" href="#/visitor/contact">Get in touch</a><span class="state-name">active</span></div>
+            <div class="state-cell"><span class="btn btn-primary" aria-disabled="true" role="button">Sending…</span><span class="state-name">disabled</span></div>
+          </div>
+
+          <h3 class="h4" style="margin-top: var(--space-xl);">Secondary</h3>
+          <div class="state-grid" style="margin-top: var(--space-md);">
+            <div class="state-cell"><a class="btn btn-secondary" href="#/visitor/resume">Download résumé</a><span class="state-name">default</span></div>
+            <div class="state-cell"><a class="btn btn-secondary is-hover" href="#/visitor/resume">Download résumé</a><span class="state-name">hover</span></div>
+            <div class="state-cell"><a class="btn btn-secondary is-focus" href="#/visitor/resume">Download résumé</a><span class="state-name">focus</span></div>
+            <div class="state-cell"><a class="btn btn-secondary is-active" href="#/visitor/resume">Download résumé</a><span class="state-name">active</span></div>
+            <div class="state-cell"><span class="btn btn-secondary" aria-disabled="true" role="button">Download résumé</span><span class="state-name">disabled</span></div>
+          </div>
+
+          <h3 class="h4" style="margin-top: var(--space-xl);">Quiet</h3>
+          <div class="state-grid" style="margin-top: var(--space-md);">
+            <div class="state-cell"><a class="btn btn-quiet" href="#/visitor/work">See all work</a><span class="state-name">default</span></div>
+            <div class="state-cell"><a class="btn btn-quiet is-hover" href="#/visitor/work">See all work</a><span class="state-name">hover</span></div>
+            <div class="state-cell"><a class="btn btn-quiet is-focus" href="#/visitor/work">See all work</a><span class="state-name">focus</span></div>
+          </div>
+
+          <hr class="rule">
+
+          <h2 class="h2">Links</h2>
+          <div class="state-grid" style="margin-top: var(--space-md);">
+            <div class="state-cell"><a class="link" href="#/visitor/career">the career history</a><span class="state-name">default</span></div>
+            <div class="state-cell"><a class="link is-hover" href="#/visitor/career">the career history</a><span class="state-name">hover</span></div>
+            <div class="state-cell"><a class="link is-focus" href="#/visitor/career">the career history</a><span class="state-name">focus</span></div>
+            <div class="state-cell"><a class="link is-active" href="#/visitor/career">the career history</a><span class="state-name">active</span></div>
+            <div class="state-cell"><a class="link link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank">the repository</a><span class="state-name">leaves the site</span></div>
+            <div class="state-cell"><span class="link is-disabled">not yet added</span><span class="state-name">unavailable</span></div>
+          </div>
+
+          <hr class="rule">
+
+          <h2 class="h2">Tags</h2>
+          <div class="row" style="margin-top: var(--space-md);">
+            <span class="tag">Go</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag tag-accent">Featured</span>
+            <span class="tag tag-open">Maintainer</span>
+            <span class="sample">Sample</span>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink-soft"></div>
-          <div class="swatch-body"><span class="token">--color-ink-soft</span><span class="swatch-use">Supporting text</span></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <h2 class="h2">Cards</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">A whole card is the link. Work, roles, open source and credentials all reuse it.</p>
+          <div class="grid-3" style="margin-top: var(--space-lg);">
+            <a class="card card-feature" href="#/visitor/work">
+              <div class="image image-wide image-flush"><span class="image-label">Sample image</span></div>
+              <div class="card-body">
+                <p class="card-title">Work card</p>
+                <p class="card-meta">Role · 2024–2025</p>
+                <p class="card-outcome">The outcome in one line.</p>
+                <div class="row"><span class="tag">Go</span><span class="tag">Postgres</span></div>
+              </div>
+            </a>
+
+            <a class="card card-feature is-hover" href="#/visitor/work">
+              <div class="image image-wide image-flush"><span class="image-label">Sample image</span></div>
+              <div class="card-body">
+                <p class="card-title">Work card</p>
+                <p class="card-meta">Role · 2024–2025</p>
+                <p class="card-outcome">The same card, on hover: it lifts and the shadow deepens.</p>
+                <div class="row"><span class="tag">Go</span><span class="tag">Postgres</span></div>
+              </div>
+            </a>
+
+            <div class="card">
+              <p class="card-title">Plain card</p>
+              <p class="card-meta">Employer · 2022–2024</p>
+              <p class="card-outcome">No image, no link: a role in the career history, or a credential.</p>
+            </div>
+          </div>
+
+          <hr class="rule">
+
+          <h2 class="h2">Images</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">The walkthrough loads nothing from outside, so every image is a labelled placeholder. Each one keeps the shape the real image will take.</p>
+          <div class="grid-3" style="margin-top: var(--space-lg);">
+            <div><div class="image image-wide"><span class="image-label">Sample image</span></div><p class="state-name" style="margin-top: var(--space-xs);">16:9 · work, previews</p></div>
+            <div><div class="image image-square"><span class="image-label">Sample image</span></div><p class="state-name" style="margin-top: var(--space-xs);">1:1 · logos, thumbnails</p></div>
+            <div><div class="image image-portrait"><span class="image-label">Sample photo</span></div><p class="state-name" style="margin-top: var(--space-xs);">4:5 · his photo on About</p></div>
+          </div>
+
+          <hr class="rule">
+
+          <h2 class="h2">Fields</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">These are the parts the <a class="link" href="#/visitor/contact">contact form</a> is made of.</p>
+          <div class="grid-2" style="margin-top: var(--space-lg); max-width: var(--size-prose);">
+            <div class="field"><label class="label" for="dl-name">Your name</label><input class="input" id="dl-name" type="text" placeholder="Sample name"></div>
+            <div class="field"><label class="label" for="dl-why">Why you are reaching out</label><select class="select" id="dl-why"><option>A role</option><option>Freelance or contract work</option><option>Something else</option></select></div>
+          </div>
+          <div class="field" style="margin-top: var(--space-md); max-width: var(--size-prose);"><label class="label" for="dl-msg">Message</label><textarea class="textarea" id="dl-msg" placeholder="Sample message"></textarea></div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink-faint"></div>
-          <div class="swatch-body"><span class="token">--color-ink-faint</span><span class="swatch-use">Timestamps, notes</span></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <h2 class="h2">The card a shared link shows</h2>
+          <p class="meta" style="margin-top: var(--space-xs);">One link has to work in a message, a DM or a job application. Every page carries its own title, description and preview image, so it never arrives as a bare URL — and his name is spelled <strong>Piyush Singariya</strong> in all three.</p>
+
+          <div class="linkcard" style="margin-top: var(--space-lg);">
+            <div class="image image-wide"><span class="image-label">Sample preview image</span></div>
+            <div class="linkcard-body">
+              <p class="linkcard-host">piyushsingariya.com</p>
+              <p class="linkcard-title">Piyush Singariya — software engineer, exploring entrepreneurship</p>
+              <p class="linkcard-desc">The work he is proudest of, his full career history, and how to reach him. <span class="sample">Sample copy</span></p>
+            </div>
+          </div>
+
+          <div class="stack" style="margin-top: var(--space-lg); max-width: var(--size-prose);">
+            <p class="meta">Each page sets its own three: a work story page carries that project&rsquo;s title and preview image, the career page carries its own. The domain above is a placeholder until Piyush picks one.</p>
+          </div>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-accent-soft"></div>
-          <div class="swatch-body"><span class="token">--color-accent-soft</span><span class="swatch-use">Source chips, selection</span></div>
+      </section>
+
+      <section class="section section-sunken">
+        <div class="wrap">
+          <h2 class="h2">The shell, and moving through it with a keyboard</h2>
+          <p class="lede">The header sticks to the top of every page and carries his name and the six places a visitor goes. At phone width the six collapse behind a menu, and the résumé button moves into it. The footer repeats all of it, plus where to find him elsewhere.</p>
+
+          <div class="mini-head" style="margin-top: var(--space-lg);">
+            <span class="brand-name">Piyush Singariya</span>
+            <a class="nav-link" href="#/visitor/work">Work</a>
+            <a class="nav-link" href="#/visitor/open-source" aria-current="page">Open source</a>
+            <a class="nav-link is-hover" href="#/visitor/career" style="background: var(--color-surface-sunken); color: var(--color-ink);">Career</a>
+            <a class="nav-link is-focus" href="#/visitor/credentials" style="outline: var(--border-focus) solid var(--color-focus); outline-offset: var(--space-3xs);">Credentials</a>
+          </div>
+          <p class="state-name" style="margin-top: var(--space-xs);">default · current page · hover · keyboard focus</p>
+
+          <div class="stack" style="margin-top: var(--space-xl); max-width: var(--size-prose);">
+            <p>Press <strong>Tab</strong> from the top of any screen. The order is: skip link, his name, each header item, the résumé button, then the page, then the footer. Every stop draws a 3px blue ring with a little breathing room around it — the same ring on links, buttons, fields and the menu, so nothing you reach is invisible.</p>
+            <p>The first stop is the skip link. It sits off-screen until it takes focus, then drops into the corner and jumps straight past the header to the page.</p>
+          </div>
+
+          <div class="row" style="margin-top: var(--space-lg);">
+            <a class="btn btn-secondary" href="#/visitor/home">Back to the start</a>
+            <a class="btn btn-quiet" href="#/visitor/contact">Contact</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="foot-name">Piyush Singariya</p>
+            <p class="foot-line">Software engineer, building and exploring entrepreneurship since June 2026. One link for the whole picture.</p>
+            <p class="foot-line"><span class="sample">Sample copy</span></p>
+          </div>
+
+          <div>
+            <p class="foot-title">The site</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/home">Featured work</a></li>
+              <li><a class="foot-link" href="#/visitor/work">All work</a></li>
+              <li><a class="foot-link" href="#/visitor/open-source">Open source</a></li>
+              <li><a class="foot-link" href="#/visitor/career">Career</a></li>
+              <li><a class="foot-link" href="#/visitor/skills">Skills</a></li>
+              <li><a class="foot-link" href="#/visitor/credentials">Credentials</a></li>
+              <li><a class="foot-link" href="#/visitor/about">About</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="foot-title">Reach him</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/contact">Contact</a></li>
+              <li><a class="foot-link" href="#/visitor/resume">Download r&eacute;sum&eacute;</a></li>
+              <li><a class="foot-link link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank">GitHub</a></li>
+              <li><a class="foot-link link-out" href="https://www.linkedin.com/in/piyushsingariya" rel="noreferrer noopener" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="foot-line"><span class="sample">Sample list</span> &mdash; the channels here are whatever Piyush supplies. No email address or phone number is printed on the page.</p>
+          </div>
+        </div>
+
+        <div class="foot-bar">
+          <span>&copy; 2026 Piyush Singariya</span>
+          <span>Prototype walkthrough &mdash; nothing on it sends, downloads or counts anything.</span>
+          <a class="foot-link" href="#/visitor/design">Design language</a>
         </div>
       </div>
-
-      <h3 class="card-title mt-lg">Accent and meaning</h3>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-accent"></div>
-          <div class="swatch-body"><span class="token">--color-accent</span><span class="swatch-use">Vendi itself, and the one action</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-good"></div>
-          <div class="swatch-body"><span class="token">--color-good</span><span class="swatch-use">Accepted, connected, added text</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-warm"></div>
-          <div class="swatch-body"><span class="token">--color-warm</span><span class="swatch-use">Out of date, removed text</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-warn"></div>
-          <div class="swatch-body"><span class="token">--color-warn</span><span class="swatch-use">Sample data, needs a look</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-fake"></div>
-          <div class="swatch-body"><span class="token">--color-fake</span><span class="swatch-use">This is a prototype, not the app</span></div>
-        </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Slack's colours, kept separate</h3>
-      <p class="card-body">Used only inside a Slack window, never on one of Vendi's own surfaces.</p>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-rail"></div>
-          <div class="swatch-body"><span class="token">--color-slack-rail</span><span class="swatch-use">Slack's sidebar</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-active"></div>
-          <div class="swatch-body"><span class="token">--color-slack-rail-active</span><span class="swatch-use">The open channel</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-line"></div>
-          <div class="swatch-body"><span class="token">--color-slack-line</span><span class="swatch-use">Slack's dividers</span></div>
-        </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Notion's colours, kept separate</h3>
-      <p class="card-body">Used only inside a drawing of a wiki page, never on one of Vendi's own surfaces.</p>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-rail"></div>
-          <div class="swatch-body"><span class="token">--color-notion-rail</span><span class="swatch-use">Notion's sidebar</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-line"></div>
-          <div class="swatch-body"><span class="token">--color-notion-line</span><span class="swatch-use">Notion's dividers</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-mark"></div>
-          <div class="swatch-body"><span class="token">--color-notion-mark</span><span class="swatch-use">Words Vendi changed</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title">Type</h2>
-      <p class="lede">One family on Vendi's own screens, and Slack's own face inside a Slack window, so a message never looks like part of Vendi's interface.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Style</th>
-            <th scope="col">Token</th>
-            <th scope="col">Used for</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="display">Vendi knows</span></td>
-            <td><span class="token">--font-size-3xl</span> / bold</td>
-            <td>One headline per landing screen. Nothing else.</td>
-          </tr>
-          <tr>
-            <td><span class="title">Section heading</span></td>
-            <td><span class="token">--font-size-xl</span> / bold</td>
-            <td>The heading of a section.</td>
-          </tr>
-          <tr>
-            <td><span class="subtitle">A standfirst under the headline</span></td>
-            <td><span class="token">--font-size-lg</span> / normal</td>
-            <td>The line that explains the headline.</td>
-          </tr>
-          <tr>
-            <td>Body copy sits at the base size.</td>
-            <td><span class="token">--font-size-md</span> / normal</td>
-            <td>Everything read at length, and every Slack message.</td>
-          </tr>
-          <tr>
-            <td><span class="card-body">Supporting copy inside a card.</span></td>
-            <td><span class="token">--font-size-sm</span> / normal</td>
-            <td>Cards, table cells, buttons, index.</td>
-          </tr>
-          <tr>
-            <td><span class="fake-note">Timestamps, sources, prototype notes</span></td>
-            <td><span class="token">--font-size-xs</span> / normal</td>
-            <td>Metadata, tags, and anything admitting this is fake.</td>
-          </tr>
-          <tr>
-            <td><span class="eyebrow">An eyebrow</span></td>
-            <td><span class="token">--font-size-xs</span> / medium, tracked</td>
-            <td>The label above a headline.</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="fake-note mt-md">Faces: <span class="token">--font-sans</span> Inter on Vendi's screens, <span class="token">--font-slack</span> Lato inside a Slack window, <span class="token">--font-mono</span> for token names. Each falls back to the system face; the prototype loads no font from the web.</p>
-    </section>
-
-    <section class="section section-sunken">
-      <h2 class="title">Spacing</h2>
-      <p class="lede">Nine steps. Every gap, pad and margin in the walkthrough is one of them.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Step</th>
-            <th scope="col">Size</th>
-            <th scope="col">Where it is used</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><span class="space-bar space-bar-3xs"></span></td><td><span class="token">--space-3xs</span> 2px</td><td>Between a label and its icon.</td></tr>
-          <tr><td><span class="space-bar space-bar-2xs"></span></td><td><span class="token">--space-2xs</span> 4px</td><td>Between source chips.</td></tr>
-          <tr><td><span class="space-bar space-bar-xs"></span></td><td><span class="token">--space-xs</span> 8px</td><td>Inside a Slack message row.</td></tr>
-          <tr><td><span class="space-bar space-bar-sm"></span></td><td><span class="token">--space-sm</span> 12px</td><td>Button padding, row padding.</td></tr>
-          <tr><td><span class="space-bar space-bar-md"></span></td><td><span class="token">--space-md</span> 16px</td><td>Card padding, grid gaps.</td></tr>
-          <tr><td><span class="space-bar space-bar-lg"></span></td><td><span class="token">--space-lg</span> 24px</td><td>Between a heading and what follows.</td></tr>
-          <tr><td><span class="space-bar space-bar-xl"></span></td><td><span class="token">--space-xl</span> 32px</td><td>Between blocks in a section.</td></tr>
-          <tr><td><span class="space-bar space-bar-2xl"></span></td><td><span class="token">--space-2xl</span> 48px</td><td>Section padding.</td></tr>
-          <tr><td><span class="space-bar space-bar-3xl"></span></td><td><span class="token">--space-3xl</span> 72px</td><td>The tallest opening section.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section">
-      <h2 class="title">Buttons</h2>
-      <p class="lede">One primary action per screen at most. Everything else is quiet. The states below are drawn standing still — hover and focus are real on the live buttons too.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Kind</th>
-            <th scope="col">Default</th>
-            <th scope="col">Hover</th>
-            <th scope="col">Focus</th>
-            <th scope="col">Disabled</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Primary &mdash; the one thing to do</td>
-            <td><button type="button" class="btn btn-primary">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary is-hover">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary is-focus">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary" disabled>Connect Notion</button></td>
-          </tr>
-          <tr>
-            <td>Secondary &mdash; a real alternative</td>
-            <td><button type="button" class="btn">Decline</button></td>
-            <td><button type="button" class="btn is-hover">Decline</button></td>
-            <td><button type="button" class="btn is-focus">Decline</button></td>
-            <td><button type="button" class="btn" disabled>Decline</button></td>
-          </tr>
-          <tr>
-            <td>Quiet &mdash; a way out</td>
-            <td><button type="button" class="btn btn-quiet">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet is-hover">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet is-focus">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet" disabled>Not now</button></td>
-          </tr>
-          <tr>
-            <td>Inside Slack &mdash; Slack's own shape</td>
-            <td><button type="button" class="slack-btn slack-btn-go">Accept</button></td>
-            <td><button type="button" class="slack-btn">Shorter</button></td>
-            <td><button type="button" class="slack-btn">Show sources</button></td>
-            <td><span class="fake-note">Slack draws its own disabled state.</span></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="fake-note mt-md">Large is <span class="token">.btn-lg</span>, for a landing page only. A button that would do something real in the app does nothing here.</p>
-    </section>
-
-    <section class="section section-sunken">
-      <h2 class="title">Corners, shadow and labels</h2>
-      <div class="grid-2 mt-lg">
-        <div class="card">
-          <h3 class="card-title">Radius</h3>
-          <table class="spec-table mt-sm">
-            <tbody>
-              <tr><td><span class="radius-box radius-box-xs"></span></td><td><span class="token">--radius-xs</span> chips, Slack buttons</td></tr>
-              <tr><td><span class="radius-box radius-box-sm"></span></td><td><span class="token">--radius-sm</span> buttons, inputs</td></tr>
-              <tr><td><span class="radius-box radius-box-md"></span></td><td><span class="token">--radius-md</span> cards, panels</td></tr>
-              <tr><td><span class="radius-box radius-box-lg"></span></td><td><span class="token">--radius-lg</span> a whole page</td></tr>
-              <tr><td><span class="radius-box radius-box-pill"></span></td><td><span class="token">--radius-pill</span> tags, markers</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Shadow</h3>
-          <p class="card-body">Barely there. Depth comes from the borders, not the shadows.</p>
-          <table class="spec-table mt-sm">
-            <tbody>
-              <tr><td><span class="shadow-box shadow-box-sm"></span></td><td><span class="token">--shadow-sm</span> a resting panel</td></tr>
-              <tr><td><span class="shadow-box shadow-box-md"></span></td><td><span class="token">--shadow-md</span> something lifted under the cursor</td></tr>
-              <tr><td><span class="shadow-box shadow-box-lg"></span></td><td><span class="token">--shadow-lg</span> a dialog over the screen</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Labels</h3>
-      <div class="btn-row mt-sm">
-        <span class="tag">Neutral</span>
-        <span class="tag tag-good">Connected</span>
-        <span class="tag tag-warm">Out of date</span>
-        <span class="tag tag-sample">Sample data</span>
-        <span class="tag tag-fake">Prototype &mdash; does nothing</span>
-        <span class="source-chip">Notion &middot; a source Vendi read</span>
-      </div>
-      <p class="fake-note mt-md">The purple prototype label appears on every control that would do something real in the app, so nobody clicking through mistakes a drawing for a working feature.</p>
-    </section>
-
-    <div class="walk-foot">
-      <span class="walk-foot-note">Reference &middot; not part of a story</span>
-      <span class="walk-foot-links">
-        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
-        <a class="walk-link" href="#/visitor/anatomy">Anatomy of a reply &rarr;</a>
-      </span>
-    </div>
+    </footer>
   </div>
 </template>

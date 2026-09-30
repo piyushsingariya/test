@@ -1,0 +1,159 @@
+<template data-screen="visitor/contact" data-title="Contact">
+  <div class="site">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="#/visitor/home">
+          <span class="brand-name">Piyush Singariya</span>
+          <span class="brand-role">Software engineer &middot; exploring entrepreneurship</span>
+        </a>
+
+        <nav class="nav-wide" aria-label="Main">
+          <a class="nav-link" href="#/visitor/work">Work</a>
+          <a class="nav-link" href="#/visitor/open-source">Open source</a>
+          <a class="nav-link" href="#/visitor/career">Career</a>
+          <a class="nav-link" href="#/visitor/skills">Skills</a>
+          <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+          <a class="nav-link" href="#/visitor/about">About</a>
+          <a class="nav-link" href="#/visitor/contact" aria-current="page">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary head-cta" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+
+        <details class="menu">
+          <summary class="menu-button">Menu <span aria-hidden="true">&#9662;</span></summary>
+          <nav class="menu-panel" aria-label="Main, narrow screens">
+            <a class="nav-link" href="#/visitor/work">Work</a>
+            <a class="nav-link" href="#/visitor/open-source">Open source</a>
+            <a class="nav-link" href="#/visitor/career">Career</a>
+            <a class="nav-link" href="#/visitor/skills">Skills</a>
+            <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+            <a class="nav-link" href="#/visitor/about">About</a>
+            <a class="nav-link" href="#/visitor/contact" aria-current="page">Contact</a>
+            <a class="btn btn-primary" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <section class="section">
+        <div class="wrap">
+          <h1 class="h1">Get in touch</h1>
+          <p class="lede">Say what it is about and it reaches Piyush directly. He does not sign in anywhere to read it.</p>
+
+
+          <div class="contact-grid" style="margin-top: var(--space-xl);">
+            <form class="form">
+              <div class="field">
+                <label class="label" for="c-name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="c-name" name="name" type="text" placeholder="Who is writing">
+              </div>
+
+              <div class="field">
+                <label class="label" for="c-reply">How should he reply? <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="c-reply" name="reply" type="text" placeholder="An email address, or a link to you">
+                <p class="hint">Yours, not his &mdash; his is never printed on the page.</p>
+              </div>
+
+              <fieldset class="fieldset">
+                <legend class="legend">Why are you reaching out? <span class="req" aria-hidden="true">*</span></legend>
+                <p class="hint">This rides along with the message, so he can tell a role, a project and a hello apart at a glance.</p>
+                <div class="choices">
+                  <label class="choice">
+                    <input type="radio" name="reason" value="role">
+                    <span>
+                      <span class="choice-name">A role at a company</span>
+                      <span class="choice-note">Hiring, or thinking about it.</span>
+                    </span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="reason" value="freelance">
+                    <span>
+                      <span class="choice-name">Freelance or contract work</span>
+                      <span class="choice-note">A project, a scope, a budget.</span>
+                    </span>
+                  </label>
+                  <label class="choice">
+                    <input type="radio" name="reason" value="other">
+                    <span>
+                      <span class="choice-name">Something else</span>
+                      <span class="choice-note">A question, an introduction, or just saying hello.</span>
+                    </span>
+                  </label>
+                </div>
+
+              </fieldset>
+
+              <div class="field">
+                <label class="label" for="c-message">Your message <span class="req" aria-hidden="true">*</span></label>
+                <textarea class="textarea" id="c-message" name="message" rows="6" placeholder="What it is about, and anything he should know"></textarea>
+              </div>
+
+              <div class="row">
+                <a class="btn btn-primary" href="#/visitor/contact-sent">Send message</a>
+                <span class="sample">Nothing sends</span>
+              </div>
+
+              <p class="fake-note">This is a walkthrough: the button goes straight to the confirmation screen. On the built site the message reaches Piyush directly, with the reason attached. Want to see what a missed field looks like? <a class="link" href="#/visitor/contact-error">The error state is here.</a></p>
+            </form>
+
+            <div class="card">
+              <p class="h4">Or find him elsewhere</p>
+              <ul class="channels" style="margin-top: var(--space-sm);">
+                <li><a class="channel link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank"><span>GitHub</span><span class="meta">piyushsingariya</span></a></li>
+                <li><a class="channel link-out" href="https://www.linkedin.com/in/piyushsingariya" rel="noreferrer noopener" target="_blank"><span>LinkedIn</span><span class="meta">piyushsingariya</span></a></li>
+                <li><a class="channel" href="#/visitor/resume"><span>His r&eacute;sum&eacute;</span><span class="meta">PDF</span></a></li>
+              </ul>
+              <p class="meta" style="margin-top: var(--space-md);">His email address and phone number are never printed on the page. The form is how a stranger reaches him.</p>
+              <p><span class="sample">Sample list</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="foot-name">Piyush Singariya</p>
+            <p class="foot-line">Software engineer, building and exploring entrepreneurship since June 2026. One link for the whole picture.</p>
+            <p class="foot-line"><span class="sample">Sample copy</span></p>
+          </div>
+
+          <div>
+            <p class="foot-title">The site</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/home">Featured work</a></li>
+              <li><a class="foot-link" href="#/visitor/work">All work</a></li>
+              <li><a class="foot-link" href="#/visitor/open-source">Open source</a></li>
+              <li><a class="foot-link" href="#/visitor/career">Career</a></li>
+              <li><a class="foot-link" href="#/visitor/skills">Skills</a></li>
+              <li><a class="foot-link" href="#/visitor/credentials">Credentials</a></li>
+              <li><a class="foot-link" href="#/visitor/about">About</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="foot-title">Reach him</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/contact">Contact</a></li>
+              <li><a class="foot-link" href="#/visitor/resume">Download r&eacute;sum&eacute;</a></li>
+              <li><a class="foot-link link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank">GitHub</a></li>
+              <li><a class="foot-link link-out" href="https://www.linkedin.com/in/piyushsingariya" rel="noreferrer noopener" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="foot-line"><span class="sample">Sample list</span> &mdash; the channels here are whatever Piyush supplies. No email address or phone number is printed on the page.</p>
+          </div>
+        </div>
+
+        <div class="foot-bar">
+          <span>&copy; 2026 Piyush Singariya</span>
+          <span>Prototype walkthrough &mdash; nothing on it sends, downloads or counts anything.</span>
+          <a class="foot-link" href="#/visitor/design">Design language</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>

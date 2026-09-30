@@ -1,0 +1,125 @@
+<template data-screen="visitor/work-empty" data-title="All work — nothing matches">
+  <div class="site">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="#/visitor/home">
+          <span class="brand-name">Piyush Singariya</span>
+          <span class="brand-role">Software engineer &middot; exploring entrepreneurship</span>
+        </a>
+
+        <nav class="nav-wide" aria-label="Main">
+          <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
+          <a class="nav-link" href="#/visitor/open-source">Open source</a>
+          <a class="nav-link" href="#/visitor/career">Career</a>
+          <a class="nav-link" href="#/visitor/skills">Skills</a>
+          <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+          <a class="nav-link" href="#/visitor/about">About</a>
+          <a class="nav-link" href="#/visitor/contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary head-cta" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+
+        <details class="menu">
+          <summary class="menu-button">Menu <span aria-hidden="true">&#9662;</span></summary>
+          <nav class="menu-panel" aria-label="Main, narrow screens">
+            <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
+            <a class="nav-link" href="#/visitor/open-source">Open source</a>
+            <a class="nav-link" href="#/visitor/career">Career</a>
+            <a class="nav-link" href="#/visitor/skills">Skills</a>
+            <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+            <a class="nav-link" href="#/visitor/about">About</a>
+            <a class="nav-link" href="#/visitor/contact">Contact</a>
+            <a class="btn btn-primary" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <section class="section">
+        <div class="wrap">
+          <h1 class="h1">All work</h1>
+          <p class="lede">Everything Piyush has built, not only the featured pieces. Narrow it by skill, type of work or year.</p>
+
+          <div style="margin-top: var(--space-xl);">
+          <div class="filters">
+            <div class="filter-row">
+              <p class="filter-name">Skill</p>
+              <div class="chips"><a class="chip" href="#/visitor/work">All</a><a class="chip" href="#/visitor/work-filtered" aria-current="true">Go</a><a class="chip" href="#/visitor/work-filtered">Python</a><a class="chip" href="#/visitor/work-filtered">Kubernetes</a><a class="chip" href="#/visitor/work-filtered">Postgres</a></div>
+            </div>
+            <div class="filter-row">
+              <p class="filter-name">Type of work</p>
+              <div class="chips"><a class="chip" href="#/visitor/work">All</a><a class="chip" href="#/visitor/work-filtered">Product</a><a class="chip" href="#/visitor/work-filtered">Platform</a><a class="chip" href="#/visitor/work-filtered">Open source</a><a class="chip" href="#/visitor/work-filtered" aria-current="true">Side project</a></div>
+            </div>
+            <div class="filter-row">
+              <p class="filter-name">Year</p>
+              <div class="chips"><a class="chip" href="#/visitor/work">All</a><a class="chip" href="#/visitor/work-filtered">2026</a><a class="chip" href="#/visitor/work-filtered">2025</a><a class="chip" href="#/visitor/work-filtered" aria-current="true">2024</a><a class="chip" href="#/visitor/work-filtered">Earlier</a></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="applied" style="margin-top: var(--space-md);">
+            <span class="applied-label">Narrowed by</span>
+            <a class="chip chip-applied" href="#/visitor/work-filtered">Skill: Go <span class="chip-x" aria-hidden="true">&#10005;</span></a>
+            <a class="chip chip-applied" href="#/visitor/work-filtered">Year: 2024 <span class="chip-x" aria-hidden="true">&#10005;</span></a>
+            <a class="chip chip-applied" href="#/visitor/work-filtered">Type: Side project <span class="chip-x" aria-hidden="true">&#10005;</span></a>
+            <a class="btn btn-quiet" href="#/visitor/work">Clear all</a>
+          </div>
+
+          <div class="empty" style="margin-top: var(--space-lg);">
+            <p class="h3">No work matches all three.</p>
+            <p class="meta">There is no side project in Go from 2024. Drop one of the filters, or start again.</p>
+            <div class="row" style="justify-content: center;">
+              <a class="btn btn-primary" href="#/visitor/work">Clear the filters</a>
+              <a class="btn btn-secondary" href="#/visitor/work-filtered">Back to Go in 2024</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="foot-name">Piyush Singariya</p>
+            <p class="foot-line">Software engineer, building and exploring entrepreneurship since June 2026. One link for the whole picture.</p>
+            <p class="foot-line"><span class="sample">Sample copy</span></p>
+          </div>
+
+          <div>
+            <p class="foot-title">The site</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/home">Featured work</a></li>
+              <li><a class="foot-link" href="#/visitor/work">All work</a></li>
+              <li><a class="foot-link" href="#/visitor/open-source">Open source</a></li>
+              <li><a class="foot-link" href="#/visitor/career">Career</a></li>
+              <li><a class="foot-link" href="#/visitor/skills">Skills</a></li>
+              <li><a class="foot-link" href="#/visitor/credentials">Credentials</a></li>
+              <li><a class="foot-link" href="#/visitor/about">About</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="foot-title">Reach him</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/contact">Contact</a></li>
+              <li><a class="foot-link" href="#/visitor/resume">Download r&eacute;sum&eacute;</a></li>
+              <li><a class="foot-link link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank">GitHub</a></li>
+              <li><a class="foot-link link-out" href="https://www.linkedin.com/in/piyushsingariya" rel="noreferrer noopener" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="foot-line"><span class="sample">Sample list</span> &mdash; the channels here are whatever Piyush supplies. No email address or phone number is printed on the page.</p>
+          </div>
+        </div>
+
+        <div class="foot-bar">
+          <span>&copy; 2026 Piyush Singariya</span>
+          <span>Prototype walkthrough &mdash; nothing on it sends, downloads or counts anything.</span>
+          <a class="foot-link" href="#/visitor/design">Design language</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>

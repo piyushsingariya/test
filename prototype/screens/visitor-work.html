@@ -1,0 +1,204 @@
+<template data-screen="visitor/work" data-title="All work">
+  <div class="site">
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="#/visitor/home">
+          <span class="brand-name">Piyush Singariya</span>
+          <span class="brand-role">Software engineer &middot; exploring entrepreneurship</span>
+        </a>
+
+        <nav class="nav-wide" aria-label="Main">
+          <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
+          <a class="nav-link" href="#/visitor/open-source">Open source</a>
+          <a class="nav-link" href="#/visitor/career">Career</a>
+          <a class="nav-link" href="#/visitor/skills">Skills</a>
+          <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+          <a class="nav-link" href="#/visitor/about">About</a>
+          <a class="nav-link" href="#/visitor/contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary head-cta" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+
+        <details class="menu">
+          <summary class="menu-button">Menu <span aria-hidden="true">&#9662;</span></summary>
+          <nav class="menu-panel" aria-label="Main, narrow screens">
+            <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
+            <a class="nav-link" href="#/visitor/open-source">Open source</a>
+            <a class="nav-link" href="#/visitor/career">Career</a>
+            <a class="nav-link" href="#/visitor/skills">Skills</a>
+            <a class="nav-link" href="#/visitor/credentials">Credentials</a>
+            <a class="nav-link" href="#/visitor/about">About</a>
+            <a class="nav-link" href="#/visitor/contact">Contact</a>
+            <a class="btn btn-primary" href="#/visitor/resume">R&eacute;sum&eacute;</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main class="main" id="main">
+      <section class="section">
+        <div class="wrap">
+          <h1 class="h1">All work</h1>
+          <p class="lede">Everything Piyush has built, not only the featured pieces. Narrow it by skill, type of work or year.</p>
+
+          <div style="margin-top: var(--space-xl);">
+          <div class="filters">
+            <div class="filter-row">
+              <p class="filter-name">Skill</p>
+              <div class="chips"><a class="chip" href="#/visitor/work" aria-current="true">All</a><a class="chip" href="#/visitor/work-filtered">Go</a><a class="chip" href="#/visitor/work-filtered">Python</a><a class="chip" href="#/visitor/work-filtered">Kubernetes</a><a class="chip" href="#/visitor/work-filtered">Postgres</a></div>
+            </div>
+            <div class="filter-row">
+              <p class="filter-name">Type of work</p>
+              <div class="chips"><a class="chip" href="#/visitor/work" aria-current="true">All</a><a class="chip" href="#/visitor/work-filtered">Product</a><a class="chip" href="#/visitor/work-filtered">Platform</a><a class="chip" href="#/visitor/work-filtered">Open source</a><a class="chip" href="#/visitor/work-filtered">Side project</a></div>
+            </div>
+            <div class="filter-row">
+              <p class="filter-name">Year</p>
+              <div class="chips"><a class="chip" href="#/visitor/work" aria-current="true">All</a><a class="chip" href="#/visitor/work-filtered">2026</a><a class="chip" href="#/visitor/work-filtered">2025</a><a class="chip" href="#/visitor/work-filtered">2024</a><a class="chip" href="#/visitor/work-filtered">Earlier</a></div>
+            </div>
+          </div>
+          </div>
+
+          <p class="meta" style="margin-top: var(--space-lg);">Showing <strong>all 9 pieces</strong> &middot; <span class="sample">Sample content</span></p>
+
+          <div class="worklist" style="margin-top: var(--space-md);">
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Data pipeline platform</p>
+                <p class="card-meta">Lead engineer &middot; 2024&ndash;2025 &middot; Product</p>
+                <p class="card-outcome">Moved a batch job the team had stopped trusting onto a pipeline they could reason about.</p>
+                <p class="work-tags"><span class="tag">Go</span><span class="tag">Kafka</span><span class="tag">Postgres</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Realtime sync service</p>
+                <p class="card-meta">Founding engineer &middot; 2023&ndash;2024 &middot; Product</p>
+                <p class="card-outcome">Built the sync layer the first version of the product was sold on.</p>
+                <p class="work-tags"><span class="tag">Go</span><span class="tag">gRPC</span><span class="tag">Kubernetes</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Connector framework</p>
+                <p class="card-meta">Maintainer &middot; 2022&ndash;2025 &middot; Open source</p>
+                <p class="card-outcome">Maintains the framework other teams write their own connectors against.</p>
+                <p class="work-tags"><span class="tag">Go</span><span class="tag">Docker</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Internal developer platform</p>
+                <p class="card-meta">Platform engineer &middot; 2022&ndash;2023 &middot; Platform</p>
+                <p class="card-outcome">Gave every team one way to ship, instead of five.</p>
+                <p class="work-tags"><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Go</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Billing and metering rework</p>
+                <p class="card-meta">Backend engineer &middot; 2023 &middot; Product</p>
+                <p class="card-outcome">Untangled metering so finance and engineering read the same numbers.</p>
+                <p class="work-tags"><span class="tag">Postgres</span><span class="tag">Python</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Search and ranking rewrite</p>
+                <p class="card-meta">Backend engineer &middot; 2021&ndash;2022 &middot; Product</p>
+                <p class="card-outcome">Rewrote search so results matched what people were actually asking for.</p>
+                <p class="work-tags"><span class="tag">Python</span><span class="tag">Elasticsearch</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Mobile API gateway</p>
+                <p class="card-meta">Backend engineer &middot; 2021 &middot; Platform</p>
+                <p class="card-outcome">One gateway in front of the services the apps had been calling directly.</p>
+                <p class="work-tags"><span class="tag">Go</span><span class="tag">Redis</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Founding experiment</p>
+                <p class="card-meta">Founder &middot; 2026 &middot; Product</p>
+                <p class="card-outcome">The thing he is building now, while it is still early.</p>
+                <p class="work-tags"><span class="tag">TypeScript</span><span class="tag">Postgres</span></p>
+              </div>
+            </a>
+
+            <a class="card work-row" href="#/visitor/work-detail">
+              <div class="image image-wide"><span class="image-label">Sample image</span></div>
+              <div class="work-body">
+                <p class="work-title">Talk companion tool</p>
+                <p class="card-meta">Side project &middot; 2020 &middot; Side project</p>
+                <p class="card-outcome">A small tool built to go with a talk, still online.</p>
+                <p class="work-tags"><span class="tag">TypeScript</span></p>
+              </div>
+            </a>
+          </div>
+
+          <p class="fake-note" style="margin-top: var(--space-xl);">The filters are real controls on the built site, listing every skill, type and year Piyush actually has work behind. In this walkthrough each one leads to the same narrowed example so you can see what narrowing looks like.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <p class="foot-name">Piyush Singariya</p>
+            <p class="foot-line">Software engineer, building and exploring entrepreneurship since June 2026. One link for the whole picture.</p>
+            <p class="foot-line"><span class="sample">Sample copy</span></p>
+          </div>
+
+          <div>
+            <p class="foot-title">The site</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/home">Featured work</a></li>
+              <li><a class="foot-link" href="#/visitor/work">All work</a></li>
+              <li><a class="foot-link" href="#/visitor/open-source">Open source</a></li>
+              <li><a class="foot-link" href="#/visitor/career">Career</a></li>
+              <li><a class="foot-link" href="#/visitor/skills">Skills</a></li>
+              <li><a class="foot-link" href="#/visitor/credentials">Credentials</a></li>
+              <li><a class="foot-link" href="#/visitor/about">About</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="foot-title">Reach him</p>
+            <ul class="foot-list">
+              <li><a class="foot-link" href="#/visitor/contact">Contact</a></li>
+              <li><a class="foot-link" href="#/visitor/resume">Download r&eacute;sum&eacute;</a></li>
+              <li><a class="foot-link link-out" href="https://github.com/piyushsingariya" rel="noreferrer noopener" target="_blank">GitHub</a></li>
+              <li><a class="foot-link link-out" href="https://www.linkedin.com/in/piyushsingariya" rel="noreferrer noopener" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p class="foot-line"><span class="sample">Sample list</span> &mdash; the channels here are whatever Piyush supplies. No email address or phone number is printed on the page.</p>
+          </div>
+        </div>
+
+        <div class="foot-bar">
+          <span>&copy; 2026 Piyush Singariya</span>
+          <span>Prototype walkthrough &mdash; nothing on it sends, downloads or counts anything.</span>
+          <a class="foot-link" href="#/visitor/design">Design language</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>
