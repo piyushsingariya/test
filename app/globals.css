@@ -1,0 +1,123 @@
+/*
+ * Vendi's design tokens, carried over from the prototype's styles.css.
+ * These are the only colours, fonts, spaces, radii and shadows the app uses.
+ * Step 2 builds the shared components and page chrome on top of them.
+ */
+
+:root {
+  /* Colour — warm paper, deep ink, one indigo accent */
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #f1eee9;
+  --color-ink: #1b1a18;
+  --color-ink-soft: #55504a;
+  --color-ink-faint: #8b847c;
+  --color-line: #e3ded6;
+  --color-line-strong: #cdc6bb;
+  --color-accent: #4a3ad6;
+  --color-accent-soft: #eceaff;
+  --color-accent-ink: #2f239c;
+  --color-on-accent: #ffffff;
+  --color-warm: #c2572f;
+  --color-warm-soft: #fbeade;
+  --color-good: #2f7d4f;
+  --color-good-soft: #e3f3e9;
+  --color-warn: #8a6a12;
+  --color-warn-soft: #fbf1d6;
+  --color-fake: #7b6ef0;
+  --color-fake-soft: #efedfe;
+
+  /* Slack chrome — Vendi lives inside someone else's window */
+  --color-slack-rail: #3f0e40;
+  --color-slack-rail-ink: #e4d7e5;
+  --color-slack-rail-ink-strong: #ffffff;
+  --color-slack-rail-active: #1164a3;
+  --color-slack-bg: #ffffff;
+  --color-slack-line: #e2e1e0;
+  --color-slack-ink: #1d1c1d;
+  --color-slack-ink-soft: #616061;
+
+  /* Notion chrome — the wiki Vendi proposes edits to */
+  --color-notion-bg: #ffffff;
+  --color-notion-rail: #f7f6f3;
+  --color-notion-ink: #37352f;
+  --color-notion-ink-soft: #787774;
+  --color-notion-line: #e9e9e7;
+  --color-notion-callout: #f1f0ed;
+  --color-notion-mark: #dbeddb;
+
+  /* Type */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-slack: "Lato", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-notion: "Segoe UI", system-ui, -apple-system, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-size-xs: 0.6875rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.9375rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.75rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 550;
+  --font-weight-bold: 700;
+  --font-leading-tight: 1.2;
+  --font-leading-normal: 1.55;
+
+  /* Space */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 72px;
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(27, 26, 24, 0.06);
+  --shadow-md: 0 2px 8px rgba(27, 26, 24, 0.08);
+  --shadow-lg: 0 12px 32px rgba(27, 26, 24, 0.12);
+
+  /* Layout */
+  --size-rail: 260px;
+  --size-page: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  line-height: var(--font-leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: var(--font-leading-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+a { color: var(--color-accent); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
