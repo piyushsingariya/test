@@ -41,12 +41,18 @@
       var ORDER = [
         "visitor/home",
         "visitor/work",
+        "visitor/work-filtered",
+        "visitor/work-empty",
+        "visitor/work-detail",
         "visitor/open-source",
         "visitor/career",
+        "visitor/skills",
         "visitor/credentials",
         "visitor/about",
-        "visitor/contact",
         "visitor/resume",
+        "visitor/contact",
+        "visitor/contact-error",
+        "visitor/contact-sent",
         "visitor/design"
       ];
 
@@ -217,7 +223,12 @@
 
       buildIndex();
       show();
-      window.addEventListener("hashchange", show);
+      window.addEventListener("hashchange", function () {
+        if (location.hash && location.hash.indexOf("#/") !== 0) {
+          return;
+        }
+        show();
+      });
     </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<template data-screen="visitor/contact" data-title="Contact">
+<template data-screen="visitor/contact-error" data-title="Contact — a missing reason">
   <div class="site">
     <a class="skip" href="#main">Skip to content</a>
 
@@ -42,25 +42,27 @@
         <div class="wrap">
           <h1 class="h1">Get in touch</h1>
           <p class="lede">Say what it is about and it reaches Piyush directly. He does not sign in anywhere to read it.</p>
-
+          <div class="error-summary" role="alert" style="margin-top: var(--space-lg);">
+            <strong>One thing is missing.</strong> Say why you are reaching out, so Piyush can tell your message apart from the others.
+          </div>
 
           <div class="contact-grid" style="margin-top: var(--space-xl);">
             <form class="form">
               <div class="field">
                 <label class="label" for="c-name">Your name <span class="req" aria-hidden="true">*</span></label>
-                <input class="input" id="c-name" name="name" type="text" placeholder="Who is writing">
+                <input class="input" id="c-name" name="name" type="text" placeholder="Who is writing" value="Sample Visitor">
               </div>
 
               <div class="field">
                 <label class="label" for="c-reply">How should he reply? <span class="req" aria-hidden="true">*</span></label>
-                <input class="input" id="c-reply" name="reply" type="text" placeholder="An email address, or a link to you">
+                <input class="input" id="c-reply" name="reply" type="text" placeholder="An email address, or a link to you" value="sample.visitor@example.com">
                 <p class="hint">Yours, not his &mdash; his is never printed on the page.</p>
               </div>
 
-              <fieldset class="fieldset">
+              <fieldset class="fieldset" aria-describedby="reason-error">
                 <legend class="legend">Why are you reaching out? <span class="req" aria-hidden="true">*</span></legend>
                 <p class="hint">This rides along with the message, so he can tell a role, a project and a hello apart at a glance.</p>
-                <div class="choices">
+                <div class="choices is-error">
                   <label class="choice">
                     <input type="radio" name="reason" value="role">
                     <span>
@@ -83,12 +85,12 @@
                     </span>
                   </label>
                 </div>
-
+                <p class="error-text" id="reason-error">Pick one &mdash; this is the part Piyush reads first.</p>
               </fieldset>
 
               <div class="field">
                 <label class="label" for="c-message">Your message <span class="req" aria-hidden="true">*</span></label>
-                <textarea class="textarea" id="c-message" name="message" rows="6" placeholder="What it is about, and anything he should know"></textarea>
+                <textarea class="textarea" id="c-message" name="message" rows="6" placeholder="What it is about, and anything he should know">Read the data pipeline story and wanted to ask how you would approach ours. Are you taking on contract work at the moment?</textarea>
               </div>
 
               <div class="row">

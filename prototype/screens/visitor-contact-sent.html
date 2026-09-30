@@ -1,4 +1,4 @@
-<template data-screen="visitor/about" data-title="About">
+<template data-screen="visitor/contact-sent" data-title="Message sent">
   <div class="site">
     <a class="skip" href="#main">Skip to content</a>
 
@@ -15,8 +15,8 @@
           <a class="nav-link" href="#/visitor/career">Career</a>
           <a class="nav-link" href="#/visitor/skills">Skills</a>
           <a class="nav-link" href="#/visitor/credentials">Credentials</a>
-          <a class="nav-link" href="#/visitor/about" aria-current="page">About</a>
-          <a class="nav-link" href="#/visitor/contact">Contact</a>
+          <a class="nav-link" href="#/visitor/about">About</a>
+          <a class="nav-link" href="#/visitor/contact" aria-current="page">Contact</a>
         </nav>
 
         <a class="btn btn-primary head-cta" href="#/visitor/resume">R&eacute;sum&eacute;</a>
@@ -29,8 +29,8 @@
             <a class="nav-link" href="#/visitor/career">Career</a>
             <a class="nav-link" href="#/visitor/skills">Skills</a>
             <a class="nav-link" href="#/visitor/credentials">Credentials</a>
-            <a class="nav-link" href="#/visitor/about" aria-current="page">About</a>
-            <a class="nav-link" href="#/visitor/contact">Contact</a>
+            <a class="nav-link" href="#/visitor/about">About</a>
+            <a class="nav-link" href="#/visitor/contact" aria-current="page">Contact</a>
             <a class="btn btn-primary" href="#/visitor/resume">R&eacute;sum&eacute;</a>
           </nav>
         </details>
@@ -40,40 +40,29 @@
     <main class="main" id="main">
       <section class="section">
         <div class="wrap">
-          <h1 class="h1">About</h1>
-          <p class="lede">In his own voice: who he is, what he is strongest at, and what he is looking for next.</p>
+          <a class="back" href="#/visitor/contact"><span aria-hidden="true">&larr;</span> Back to the form</a>
 
-          <div class="about-grid" style="margin-top: var(--space-xl);">
-            <div>
-              <div class="image image-portrait"><span class="image-label">Sample photo &mdash; Piyush's own goes here</span></div>
-              <p class="meta" style="margin-top: var(--space-sm);">Piyush Singariya</p>
-            </div>
+          <div class="done" style="margin-top: var(--space-sm);">
+            <span class="done-mark" aria-hidden="true">&#10003;</span>
+            <h1 class="h2">Message sent.</h1>
+            <p>It is on its way to Piyush, with the reason attached. He reads it wherever he already reads his messages &mdash; there is no inbox on this site and nobody signs in anywhere.</p>
 
-            <div class="prose">
-              <p>I build backend and data systems, and I have spent most of my career at startups small enough that the person who designs the thing is the person who carries the pager for it.</p>
-              <p>Since June 2026 I have been working on something of my own. I am still an engineer &mdash; the difference is that I now answer the question of what to build as well as how.</p>
-              <p><span class="sample">Sample text</span> &mdash; three or four paragraphs in Piyush's own words replace this, from the one supplied content set.</p>
+            <ul class="recap">
+              <li class="recap-row"><span class="recap-name">From</span><span>Sample Visitor</span></li>
+              <li class="recap-row"><span class="recap-name">Reply to</span><span>sample.visitor@example.com</span></li>
+              <li class="recap-row"><span class="recap-name">Reason</span><span><span class="tag tag-accent">Freelance or contract work</span></span></li>
+              <li class="recap-row"><span class="recap-name">Message</span><span>Read the data pipeline story and wanted to ask how you would approach ours. Are you taking on contract work at the moment?</span></li>
+            </ul>
 
-              <h2 class="h2" style="margin-top: var(--space-2xl);">What I am strongest at</h2>
-              <ul class="tl-list" style="margin-top: var(--space-md);">
-                <li>Taking a system nobody trusts and making it something a team can reason about.</li>
-                <li>Being the first engineer on a product, and staying past the first version.</li>
-                <li>Writing things down so the next person does not have to ask.</li>
-              </ul>
+            <p><span class="sample">Nothing was sent</span></p>
+          </div>
 
-              <h2 class="h2" style="margin-top: var(--space-2xl);">What I am looking for next</h2>
-              <ul class="tl-list" style="margin-top: var(--space-md);">
-                <li>A senior engineering role where the problem is a hard one.</li>
-                <li>Freelance or contract work, backend and data shaped.</li>
-                <li>People building in the same space, with nothing to sell either way.</li>
-              </ul>
+          <p class="fake-note" style="margin-top: var(--space-lg);">In the walkthrough no message leaves the page. This screen shows what a visitor sees when one does, and what Piyush receives with it.</p>
 
-              <div class="row" style="margin-top: var(--space-xl);">
-                <a class="btn btn-primary" href="#/visitor/contact">Get in touch</a>
-                <a class="btn btn-secondary" href="#/visitor/skills">What he works with</a>
-                <a class="btn btn-quiet" href="#/visitor/career">His career &rarr;</a>
-              </div>
-            </div>
+          <div class="row" style="margin-top: var(--space-xl);">
+            <a class="btn btn-primary" href="#/visitor/home">Back to the home page</a>
+            <a class="btn btn-secondary" href="#/visitor/resume">Download his r&eacute;sum&eacute;</a>
+            <a class="btn btn-quiet" href="#/visitor/contact">Send another &rarr;</a>
           </div>
         </div>
       </section>
