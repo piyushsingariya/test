@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vendi — prototype walkthrough</title>
+    <title>Piyush Singariya — prototype walkthrough</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="shell">
       <aside class="shell-rail">
-        <a class="brand" href="#/visitor/home">
-          <span class="brand-mark" aria-hidden="true">V</span>
-          <span>
-            <span class="brand-name">Vendi</span><br>
-            <span class="brand-sub">Back to the start</span>
-          </span>
+        <a class="walk-brand" href="#/visitor/home">
+          Piyush Singariya
+          <span>Portfolio — clickable walkthrough</span>
         </a>
 
-        <p class="prototype-note">A clickable walkthrough, not the app. Nothing here connects to Slack or Notion, and every answer, summary and source is made up for the walkthrough.</p>
+        <p class="walk-note">A walkthrough of the screens, not the site. Nothing here sends, downloads or counts anything, and every piece of content is sample text standing in until Piyush supplies his own.</p>
 
         <nav id="index" aria-label="Screens"></nav>
       </aside>
 
       <main class="shell-main">
         <div class="shell-bar">
-          <span class="shell-bar-title" id="screen-title">Vendi</span>
+          <span class="shell-bar-title" id="screen-title">Portfolio</span>
           <span class="shell-bar-persona" id="screen-persona"></span>
+          <div class="width-switch">
+            <span class="width-switch-label" id="width-label">Width</span>
+            <button type="button" class="width-btn" data-width="desktop" aria-pressed="true">Desktop</button>
+            <button type="button" class="width-btn" data-width="mobile" aria-pressed="false">Phone</button>
+          </div>
         </div>
         <div class="stage" id="stage" data-platform="desktop">
           <div class="stage-frame" data-mount></div>
@@ -38,33 +40,18 @@
 
       var ORDER = [
         "visitor/home",
-        "employee/ask",
-        "employee/thread",
-        "employee/summary",
-        "employee/shorter",
-        "employee/topic",
-        "employee/no-answer",
-        "employee/dm",
-        "owner/proposal",
-        "owner/accepted",
-        "owner/declined",
-        "owner/stale",
-        "admin/install",
-        "admin/invite",
-        "admin/notion",
-        "admin/channels",
-        "admin/sources",
-        "admin/log",
-        "admin/entry",
-        "visitor/anatomy",
+        "visitor/work",
+        "visitor/open-source",
+        "visitor/career",
+        "visitor/credentials",
+        "visitor/about",
+        "visitor/contact",
+        "visitor/resume",
         "visitor/design"
       ];
 
       var PERSONAS = {
-        visitor: { label: "Visitor", platform: "desktop" },
-        employee: { label: "Employee", platform: "desktop" },
-        owner: { label: "Page owner", platform: "desktop" },
-        admin: { label: "Admin", platform: "desktop" }
+        visitor: { label: "Visitor", platform: "desktop" }
       };
 
       var templates = Array.prototype.slice.call(
@@ -93,9 +80,25 @@
       var titleEl = document.getElementById("screen-title");
       var personaEl = document.getElementById("screen-persona");
       var indexEl = document.getElementById("index");
+      var widthButtons = Array.prototype.slice.call(
+        document.querySelectorAll(".width-btn")
+      );
+
+      var width = null;
 
       function personaOf(id) {
         return PERSONAS[id] || { label: id || "Screens", platform: "desktop" };
+      }
+
+      function setWidth(next) {
+        width = next;
+        stage.setAttribute("data-platform", next);
+        widthButtons.forEach(function (button) {
+          button.setAttribute(
+            "aria-pressed",
+            button.getAttribute("data-width") === next ? "true" : "false"
+          );
+        });
       }
 
       function buildIndex() {
@@ -167,10 +170,13 @@
         var persona = personaOf(screen.persona);
 
         mount.replaceChildren(screen.template.content.cloneNode(true));
-        stage.setAttribute("data-platform", persona.platform);
+        if (width === null) {
+          setWidth(persona.platform);
+        }
         titleEl.textContent = screen.title;
         personaEl.textContent = persona.label;
-        document.title = "Vendi — " + screen.title;
+        document.title = "Piyush Singariya — " + screen.title;
+        mount.scrollTop = 0;
         stage.scrollTop = 0;
         window.scrollTo(0, 0);
 
@@ -201,6 +207,12 @@
         if (a.route === START) { return -1; }
         if (b.route === START) { return 1; }
         return a.route < b.route ? -1 : a.route > b.route ? 1 : 0;
+      });
+
+      widthButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setWidth(button.getAttribute("data-width"));
+        });
       });
 
       buildIndex();
