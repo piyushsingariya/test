@@ -1,0 +1,263 @@
+<template data-screen="visitor/design" data-title="Design language">
+  <div class="page">
+    <section class="section">
+      <p class="eyebrow">Reference</p>
+      <h1 class="title">Vendi's design language</h1>
+      <p class="lede">Warm paper, deep ink, one indigo accent. Vendi is a coworker, not a chatbot: the screens read like a well-set document, and the only saturated colour on a screen is the thing you are meant to act on. Slack's own colours are kept in a separate set, so Vendi's surfaces and Slack's never blur into each other.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <h2 class="title">Colour</h2>
+      <p class="lede">Every colour on every screen is one of these. No screen uses a colour that is not named here.</p>
+
+      <h3 class="card-title mt-lg">Paper and ink</h3>
+      <div class="swatch-grid mt-sm">
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-bg"></div>
+          <div class="swatch-body"><span class="token">--color-bg</span><span class="swatch-use">Behind everything</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-surface"></div>
+          <div class="swatch-body"><span class="token">--color-surface</span><span class="swatch-use">Cards, panels, pages</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-sunken"></div>
+          <div class="swatch-body"><span class="token">--color-surface-sunken</span><span class="swatch-use">A section set back</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-line"></div>
+          <div class="swatch-body"><span class="token">--color-line</span><span class="swatch-use">Every border</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-ink"></div>
+          <div class="swatch-body"><span class="token">--color-ink</span><span class="swatch-use">Headings and body</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-ink-soft"></div>
+          <div class="swatch-body"><span class="token">--color-ink-soft</span><span class="swatch-use">Supporting text</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-ink-faint"></div>
+          <div class="swatch-body"><span class="token">--color-ink-faint</span><span class="swatch-use">Timestamps, notes</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-accent-soft"></div>
+          <div class="swatch-body"><span class="token">--color-accent-soft</span><span class="swatch-use">Source chips, selection</span></div>
+        </div>
+      </div>
+
+      <h3 class="card-title mt-lg">Accent and meaning</h3>
+      <div class="swatch-grid mt-sm">
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-accent"></div>
+          <div class="swatch-body"><span class="token">--color-accent</span><span class="swatch-use">Vendi itself, and the one action</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-good"></div>
+          <div class="swatch-body"><span class="token">--color-good</span><span class="swatch-use">Accepted, connected, added text</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-warm"></div>
+          <div class="swatch-body"><span class="token">--color-warm</span><span class="swatch-use">Out of date, removed text</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-warn"></div>
+          <div class="swatch-body"><span class="token">--color-warn</span><span class="swatch-use">Sample data, needs a look</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-fake"></div>
+          <div class="swatch-body"><span class="token">--color-fake</span><span class="swatch-use">This is a prototype, not the app</span></div>
+        </div>
+      </div>
+
+      <h3 class="card-title mt-lg">Slack's colours, kept separate</h3>
+      <p class="card-body">Used only inside a Slack window, never on one of Vendi's own surfaces.</p>
+      <div class="swatch-grid mt-sm">
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-slack-rail"></div>
+          <div class="swatch-body"><span class="token">--color-slack-rail</span><span class="swatch-use">Slack's sidebar</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-slack-active"></div>
+          <div class="swatch-body"><span class="token">--color-slack-rail-active</span><span class="swatch-use">The open channel</span></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip swatch-chip-slack-line"></div>
+          <div class="swatch-body"><span class="token">--color-slack-line</span><span class="swatch-use">Slack's dividers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Type</h2>
+      <p class="lede">One family on Vendi's own screens, and Slack's own face inside a Slack window, so a message never looks like part of Vendi's interface.</p>
+      <table class="spec-table mt-lg">
+        <thead>
+          <tr>
+            <th scope="col">Style</th>
+            <th scope="col">Token</th>
+            <th scope="col">Used for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="display">Vendi knows</span></td>
+            <td><span class="token">--font-size-3xl</span> / bold</td>
+            <td>One headline per landing screen. Nothing else.</td>
+          </tr>
+          <tr>
+            <td><span class="title">Section heading</span></td>
+            <td><span class="token">--font-size-xl</span> / bold</td>
+            <td>The heading of a section.</td>
+          </tr>
+          <tr>
+            <td><span class="subtitle">A standfirst under the headline</span></td>
+            <td><span class="token">--font-size-lg</span> / normal</td>
+            <td>The line that explains the headline.</td>
+          </tr>
+          <tr>
+            <td>Body copy sits at the base size.</td>
+            <td><span class="token">--font-size-md</span> / normal</td>
+            <td>Everything read at length, and every Slack message.</td>
+          </tr>
+          <tr>
+            <td><span class="card-body">Supporting copy inside a card.</span></td>
+            <td><span class="token">--font-size-sm</span> / normal</td>
+            <td>Cards, table cells, buttons, index.</td>
+          </tr>
+          <tr>
+            <td><span class="fake-note">Timestamps, sources, prototype notes</span></td>
+            <td><span class="token">--font-size-xs</span> / normal</td>
+            <td>Metadata, tags, and anything admitting this is fake.</td>
+          </tr>
+          <tr>
+            <td><span class="eyebrow">An eyebrow</span></td>
+            <td><span class="token">--font-size-xs</span> / medium, tracked</td>
+            <td>The label above a headline.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fake-note mt-md">Faces: <span class="token">--font-sans</span> Inter on Vendi's screens, <span class="token">--font-slack</span> Lato inside a Slack window, <span class="token">--font-mono</span> for token names. Each falls back to the system face; the prototype loads no font from the web.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <h2 class="title">Spacing</h2>
+      <p class="lede">Nine steps. Every gap, pad and margin in the walkthrough is one of them.</p>
+      <table class="spec-table mt-lg">
+        <thead>
+          <tr>
+            <th scope="col">Step</th>
+            <th scope="col">Size</th>
+            <th scope="col">Where it is used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="space-bar space-bar-3xs"></span></td><td><span class="token">--space-3xs</span> 2px</td><td>Between a label and its icon.</td></tr>
+          <tr><td><span class="space-bar space-bar-2xs"></span></td><td><span class="token">--space-2xs</span> 4px</td><td>Between source chips.</td></tr>
+          <tr><td><span class="space-bar space-bar-xs"></span></td><td><span class="token">--space-xs</span> 8px</td><td>Inside a Slack message row.</td></tr>
+          <tr><td><span class="space-bar space-bar-sm"></span></td><td><span class="token">--space-sm</span> 12px</td><td>Button padding, row padding.</td></tr>
+          <tr><td><span class="space-bar space-bar-md"></span></td><td><span class="token">--space-md</span> 16px</td><td>Card padding, grid gaps.</td></tr>
+          <tr><td><span class="space-bar space-bar-lg"></span></td><td><span class="token">--space-lg</span> 24px</td><td>Between a heading and what follows.</td></tr>
+          <tr><td><span class="space-bar space-bar-xl"></span></td><td><span class="token">--space-xl</span> 32px</td><td>Between blocks in a section.</td></tr>
+          <tr><td><span class="space-bar space-bar-2xl"></span></td><td><span class="token">--space-2xl</span> 48px</td><td>Section padding.</td></tr>
+          <tr><td><span class="space-bar space-bar-3xl"></span></td><td><span class="token">--space-3xl</span> 72px</td><td>The tallest opening section.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Buttons</h2>
+      <p class="lede">One primary action per screen at most. Everything else is quiet. The states below are drawn standing still — hover and focus are real on the live buttons too.</p>
+      <table class="spec-table mt-lg">
+        <thead>
+          <tr>
+            <th scope="col">Kind</th>
+            <th scope="col">Default</th>
+            <th scope="col">Hover</th>
+            <th scope="col">Focus</th>
+            <th scope="col">Disabled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary &mdash; the one thing to do</td>
+            <td><button type="button" class="btn btn-primary">Connect Notion</button></td>
+            <td><button type="button" class="btn btn-primary is-hover">Connect Notion</button></td>
+            <td><button type="button" class="btn btn-primary is-focus">Connect Notion</button></td>
+            <td><button type="button" class="btn btn-primary" disabled>Connect Notion</button></td>
+          </tr>
+          <tr>
+            <td>Secondary &mdash; a real alternative</td>
+            <td><button type="button" class="btn">Decline</button></td>
+            <td><button type="button" class="btn is-hover">Decline</button></td>
+            <td><button type="button" class="btn is-focus">Decline</button></td>
+            <td><button type="button" class="btn" disabled>Decline</button></td>
+          </tr>
+          <tr>
+            <td>Quiet &mdash; a way out</td>
+            <td><button type="button" class="btn btn-quiet">Not now</button></td>
+            <td><button type="button" class="btn btn-quiet is-hover">Not now</button></td>
+            <td><button type="button" class="btn btn-quiet is-focus">Not now</button></td>
+            <td><button type="button" class="btn btn-quiet" disabled>Not now</button></td>
+          </tr>
+          <tr>
+            <td>Inside Slack &mdash; Slack's own shape</td>
+            <td><button type="button" class="slack-btn slack-btn-go">Accept</button></td>
+            <td><button type="button" class="slack-btn">Shorter</button></td>
+            <td><button type="button" class="slack-btn">Show sources</button></td>
+            <td><span class="fake-note">Slack draws its own disabled state.</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="fake-note mt-md">Large is <span class="token">.btn-lg</span>, for a landing page only. A button that would do something real in the app does nothing here.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <h2 class="title">Corners, shadow and labels</h2>
+      <div class="grid-2 mt-lg">
+        <div class="card">
+          <h3 class="card-title">Radius</h3>
+          <table class="spec-table mt-sm">
+            <tbody>
+              <tr><td><span class="radius-box radius-box-xs"></span></td><td><span class="token">--radius-xs</span> chips, Slack buttons</td></tr>
+              <tr><td><span class="radius-box radius-box-sm"></span></td><td><span class="token">--radius-sm</span> buttons, inputs</td></tr>
+              <tr><td><span class="radius-box radius-box-md"></span></td><td><span class="token">--radius-md</span> cards, panels</td></tr>
+              <tr><td><span class="radius-box radius-box-lg"></span></td><td><span class="token">--radius-lg</span> a whole page</td></tr>
+              <tr><td><span class="radius-box radius-box-pill"></span></td><td><span class="token">--radius-pill</span> tags, markers</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Shadow</h3>
+          <p class="card-body">Barely there. Depth comes from the borders, not the shadows.</p>
+          <table class="spec-table mt-sm">
+            <tbody>
+              <tr><td><span class="shadow-box shadow-box-sm"></span></td><td><span class="token">--shadow-sm</span> a resting panel</td></tr>
+              <tr><td><span class="shadow-box shadow-box-md"></span></td><td><span class="token">--shadow-md</span> something lifted under the cursor</td></tr>
+              <tr><td><span class="shadow-box shadow-box-lg"></span></td><td><span class="token">--shadow-lg</span> a dialog over the screen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3 class="card-title mt-lg">Labels</h3>
+      <div class="btn-row mt-sm">
+        <span class="tag">Neutral</span>
+        <span class="tag tag-good">Connected</span>
+        <span class="tag tag-warm">Out of date</span>
+        <span class="tag tag-sample">Sample data</span>
+        <span class="tag tag-fake">Prototype &mdash; does nothing</span>
+        <span class="source-chip">Notion &middot; a source Vendi read</span>
+      </div>
+      <p class="fake-note mt-md">The purple prototype label appears on every control that would do something real in the app, so nobody clicking through mistakes a drawing for a working feature.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Reference &middot; not part of a story</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/visitor/anatomy">Anatomy of a reply &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

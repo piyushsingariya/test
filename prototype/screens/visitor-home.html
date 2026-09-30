@@ -1,0 +1,147 @@
+<template data-screen="visitor/home" data-title="Home">
+  <div class="page">
+    <section class="section">
+      <p class="eyebrow">An AI coworker in Slack</p>
+      <h1 class="display">Vendi already knows how your company works.</h1>
+      <p class="subtitle">Vendi sits in your Slack with the context your team has built up — threads, channels, and your Notion wiki. Ask it a question and it answers with the sources it used. Ask it to summarise a thread and it does. And when Slack settles something the wiki still gets wrong, Vendi writes the edit and sends it to the page's owner.</p>
+      <div class="btn-row mt-lg">
+        <button type="button" class="btn btn-primary btn-lg">Add Vendi to Slack</button>
+        <span class="tag tag-fake">Prototype — nothing installs</span>
+      </div>
+      <p class="fake-note mt-xs">This button does nothing. Vendi is not built yet; this walkthrough is how its screens get agreed.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <h2 class="title">What Vendi does</h2>
+      <p class="lede">Three things in the first version. Nothing else.</p>
+      <div class="grid-3 mt-lg">
+        <article class="card">
+          <h3 class="card-title">Answers, with its sources</h3>
+          <p class="card-body">Ask in a channel or a DM. Vendi answers from your Slack history and your Notion wiki, and shows every page and message it read. If it cannot find the answer, it says so instead of guessing.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Summarises a thread or a channel</h3>
+          <p class="card-body">Mention Vendi in a long thread and it writes up what was said, what was decided, and what is still open — in the thread, where everyone can see it.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Keeps Notion honest</h3>
+          <p class="card-body">When a Slack thread settles something the wiki contradicts, Vendi drafts the page edit and sends it to that page's owner. The owner accepts or declines it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <h2 class="title">How Vendi sounds</h2>
+        <span class="tag tag-sample">Sample conversation — made up for this walkthrough</span>
+      </div>
+      <p class="lede">Short, plain, and never more certain than its sources.</p>
+
+      <div class="slack mt-lg">
+        <div class="slack-message">
+          <span class="slack-avatar" aria-hidden="true">PR</span>
+          <div>
+            <p class="slack-author">Priya Raman <span class="slack-time">10:42</span></p>
+            <p class="slack-text">@Vendi how long do refund requests take to approve now? I keep telling customers five days and I'm not sure that's still right.</p>
+          </div>
+        </div>
+
+        <div class="slack-message">
+          <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+          <div>
+            <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">10:42</span></p>
+            <p class="slack-text">Two business days, not five. Finance shortened it on 4 September when the new approval rule went live — anything under $500 is auto-approved and the rest goes to one approver instead of two.</p>
+            <div class="slack-block">
+              <p class="slack-text">Heads up: the Notion page still says five days. Want me to send the correction to its owner?</p>
+            </div>
+            <ul class="source-list mt-xs">
+              <li><span class="source-chip">Notion · Refunds policy</span></li>
+              <li><span class="source-chip">#finance-ops · 4 Sep</span></li>
+              <li><span class="source-chip">#support · 12 Sep</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-lg">
+        <article class="card">
+          <h3 class="card-title">It shows its work</h3>
+          <p class="card-body">Every answer carries the messages and pages it came from, so you can check it in one click.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">It says when it doesn't know</h3>
+          <p class="card-body">No source, no answer. Vendi tells you what it looked at and who is likely to know instead.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-sunken">
+      <h2 class="title">What Vendi does not do</h2>
+      <p class="lede">Worth saying plainly, because a coworker with your company's context should have limits.</p>
+      <div class="grid-3 mt-lg">
+        <article class="card">
+          <h3 class="card-title">It never edits the wiki on its own</h3>
+          <p class="card-body">Every Notion change is a proposal. The page's owner accepts or declines it, and nothing changes until they do.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Slack only, Notion only</h3>
+          <p class="card-body">The first version lives in Slack and reads Notion. No other chat tool, no other wiki.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">It doesn't act in your other tools</h3>
+          <p class="card-body">Vendi will not file a ticket, send an email or change a record anywhere else. It answers, it summarises, it proposes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Walk the prototype</h2>
+      <p class="lede">Three people, three stories. Every screen here is a drawing of the app, not the app — click through one and tell us what is wrong with it.</p>
+
+      <div class="grid-3 mt-lg">
+        <a class="story-card" href="#/employee/ask">
+          <p class="story-step">Story 1</p>
+          <h3 class="card-title">An employee asks Vendi something</h3>
+          <p class="card-body">Priya mentions Vendi in a channel, gets an answer with its sources, and asks it to summarise the thread she is standing in.</p>
+          <span class="story-go">Walk it &rarr;</span>
+        </a>
+        <a class="story-card" href="#/owner/proposal">
+          <p class="story-step">Story 2</p>
+          <h3 class="card-title">A page owner decides on an edit</h3>
+          <p class="card-body">Marco owns the Refunds policy page. Vendi sends him a correction it drafted from Slack, and he accepts or declines it.</p>
+          <span class="story-go">Walk it &rarr;</span>
+        </a>
+        <a class="story-card" href="#/admin/sources">
+          <p class="story-step">Story 3</p>
+          <h3 class="card-title">An admin connects and audits</h3>
+          <p class="card-body">Dana installs Vendi, connects Slack and Notion, sees what it has read and when, and checks what it has answered and proposed.</p>
+          <span class="story-go">Walk it &rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid-2 mt-lg">
+        <a class="story-card" href="#/visitor/anatomy">
+          <p class="story-step">Reference</p>
+          <h3 class="card-title">Anatomy of a Vendi reply</h3>
+          <p class="card-body">Every part of what Vendi posts in Slack, named: the answer, the sources under it, and what a person can do next.</p>
+          <span class="story-go">Open it &rarr;</span>
+        </a>
+        <a class="story-card" href="#/visitor/design">
+          <p class="story-step">Reference</p>
+          <h3 class="card-title">Design language</h3>
+          <p class="card-body">The type, colour, spacing and buttons every screen in this walkthrough is built from.</p>
+          <span class="story-go">Open it &rarr;</span>
+        </a>
+      </div>
+
+      <p class="fake-note mt-md">Names, messages, pages and dates in this walkthrough are sample data. Nothing here is a real customer, and no numbers are claimed.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">You are at the start.</span>
+      <span class="walk-foot-links">
+        <a class="walk-link" href="#/employee/ask">Start story 1 &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,104 @@
+<template data-screen="employee/ask" data-title="Ask Vendi in a channel">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 1 &middot; Priya, support</p>
+          <h1 class="title">Priya asks Vendi in the channel she is already in</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">She does not open a new tool. She mentions Vendi in #support, and the answer arrives in the thread with everything it was drawn from.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">#general</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#people-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask" aria-current="page">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Apps</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">Vendi</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-head">
+            <span class="slack-channel">#support</span>
+            <span class="slack-head-note">24 members &middot; Vendi is in this channel</span>
+          </div>
+
+          <div class="slack-body">
+            <p class="slack-day">Today</p>
+
+            <div class="slack-message">
+              <span class="slack-avatar" aria-hidden="true">PR</span>
+              <div>
+                <p class="slack-author">Priya Raman <span class="slack-time">10:41</span></p>
+                <p class="slack-text">Customer is asking why their refund hasn't landed. I told them five working days but I think that changed?</p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar" aria-hidden="true">PR</span>
+              <div>
+                <p class="slack-author">Priya Raman <span class="slack-time">10:42</span></p>
+                <p class="slack-text">@Vendi how long do refund requests take to approve now?</p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">10:42</span></p>
+                <p class="slack-text">Two business days, not five. Finance shortened it on 4 September: anything under $500 is auto-approved, and the rest goes to one approver instead of two.</p>
+                <p class="slack-meta">Read 3 sources</p>
+                <ul class="source-list mt-xs">
+                  <li><a class="source-chip" href="#/employee/ask">Notion &middot; Refunds policy</a></li>
+                  <li><a class="source-chip" href="#/employee/ask">#finance-ops &middot; 4 Sep</a></li>
+                  <li><a class="source-chip" href="#/employee/ask">#support &middot; 12 Sep</a></li>
+                </ul>
+                <div class="slack-card">
+                  <p class="slack-card-title">The Notion page still says five days</p>
+                  <p class="slack-text">I can draft the correction and send it to the page's owner, Marco Villalba. I will not change the page myself.</p>
+                </div>
+                <div class="slack-actions">
+                  <a class="slack-btn slack-btn-go" href="#/owner/proposal">Send the correction to Marco</a>
+                  <button type="button" class="slack-btn">Summarise this thread</button>
+                  <button type="button" class="slack-btn">Shorter</button>
+                </div>
+                <p class="slack-meta">Answered from what you can see. Nothing here came from a channel or page you are not in.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slack-composer">
+            <span>Message #support</span>
+            <button type="button" class="slack-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. The composer does not type and no button here sends anything.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Still to come in this story</h2>
+      <p class="lede">The rest of Priya's screens &mdash; asking Vendi to summarise the thread, asking for it shorter or narrowed to one topic, and the direct message where she asks it something private &mdash; are drawn in the next step of this prototype.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 1 of 3 &middot; Employee</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/owner/proposal">Story 2: the page owner &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>
