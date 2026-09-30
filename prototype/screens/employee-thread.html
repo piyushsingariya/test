@@ -1,0 +1,126 @@
+<template data-screen="employee/thread" data-title="Summarise this thread">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 1 &middot; Priya, support</p>
+          <h1 class="title">Priya asks Vendi to summarise the thread she is standing in</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">The thread is 34 replies long and she joined it late. She asks in the thread, and the summary lands in the thread &mdash; not in the channel, where nobody asked for it.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">#general</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/no-answer">#people-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/thread" aria-current="page">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Apps</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/dm">Vendi</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-panes">
+            <div class="slack-pane">
+              <div class="slack-head">
+                <span class="slack-channel">#support</span>
+                <span class="slack-head-note">24 members &middot; Vendi is in this channel</span>
+              </div>
+              <div class="slack-body">
+                <p class="slack-day">Today</p>
+                <div class="slack-message">
+                  <span class="slack-avatar" aria-hidden="true">AS</span>
+                  <div>
+                    <p class="slack-author">Ade Salami <span class="slack-time">09:12</span></p>
+                    <p class="slack-text">Payments outage this morning &mdash; refunds are queuing. Keeping everything in this thread.</p>
+                    <p class="slack-thread-line">34 replies &middot; 9 people &middot; last reply 15:40</p>
+                  </div>
+                </div>
+                <div class="slack-message">
+                  <span class="slack-avatar" aria-hidden="true">LC</span>
+                  <div>
+                    <p class="slack-author">Lin Chen <span class="slack-time">15:52</span></p>
+                    <p class="slack-text">Status page wording still needs a pass, I'll do it after standup.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slack-composer">
+                <span>Message #support</span>
+                <button type="button" class="slack-send">Send</button>
+              </div>
+            </div>
+
+            <div class="slack-pane">
+              <div class="slack-head">
+                <span class="slack-channel">Thread</span>
+                <span class="slack-head-note">#support &middot; 34 replies</span>
+              </div>
+              <p class="slack-pane-note">Only the people in this thread see what is posted here.</p>
+              <div class="slack-body">
+                <div class="slack-message">
+                  <span class="slack-avatar" aria-hidden="true">PR</span>
+                  <div>
+                    <p class="slack-author">Priya Raman <span class="slack-time">15:58</span></p>
+                    <p class="slack-text">@Vendi summarise this thread for me, I just picked up the queue.</p>
+                  </div>
+                </div>
+
+                <div class="slack-message">
+                  <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+                  <div>
+                    <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">15:58</span></p>
+                    <p class="slack-text">Here is this thread, shortest version first.</p>
+                    <ul class="slack-list">
+                      <li>The refunds that queued during the outage were not lost &mdash; they retried on their own by 14:00.</li>
+                      <li>Anything showing &ldquo;approved&rdquo; in the dashboard was already paid; the delay was in the display.</li>
+                      <li>Two customers were charged twice. Finance reversed both by hand; Ade has the two account numbers.</li>
+                      <li>Settled here: tell customers two business days, and only escalate to #finance-ops past that.</li>
+                      <li>Still open: the status page wording. Lin said she would do it after standup.</li>
+                    </ul>
+                    <p class="slack-meta">What I covered</p>
+                    <ul class="slack-facts">
+                      <li class="slack-fact">34 replies</li>
+                      <li class="slack-fact">9 people</li>
+                      <li class="slack-fact">09:12&ndash;15:40 today</li>
+                      <li class="slack-fact">This thread only</li>
+                    </ul>
+                    <div class="slack-actions">
+                      <button type="button" class="slack-btn">Shorter</button>
+                      <button type="button" class="slack-btn">Longer</button>
+                      <button type="button" class="slack-btn">One topic</button>
+                      <a class="slack-btn slack-btn-go" href="#/employee/summary">Summarise the whole channel instead</a>
+                    </div>
+                    <p class="slack-access">I read this thread and nothing else. Nothing from a channel or a page you are not in went into it.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slack-composer">
+                <span>Reply in thread</span>
+                <button type="button" class="slack-send">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. Shorter, longer and one-topic do nothing on this screen &mdash; the next three screens walk those on a channel summary.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 1 &middot; screen 2 of 7 &middot; Employee</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/employee/ask">&larr; Asking in the channel</a>
+        <a class="walk-link" href="#/employee/summary">Summarise a channel &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

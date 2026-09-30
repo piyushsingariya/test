@@ -36,6 +36,21 @@
     <script>
       var START = "visitor/home";
 
+      var ORDER = [
+        "visitor/home",
+        "employee/ask",
+        "employee/thread",
+        "employee/summary",
+        "employee/shorter",
+        "employee/topic",
+        "employee/no-answer",
+        "employee/dm",
+        "owner/proposal",
+        "admin/sources",
+        "visitor/anatomy",
+        "visitor/design"
+      ];
+
       var PERSONAS = {
         visitor: { label: "Visitor", platform: "desktop" },
         employee: { label: "Employee", platform: "desktop" },
@@ -169,6 +184,11 @@
         if (pa === -1) { pa = order.length; }
         if (pb === -1) { pb = order.length; }
         if (pa !== pb) { return pa - pb; }
+        var oa = ORDER.indexOf(a.route);
+        var ob = ORDER.indexOf(b.route);
+        if (oa === -1) { oa = ORDER.length; }
+        if (ob === -1) { ob = ORDER.length; }
+        if (oa !== ob) { return oa - ob; }
         if (a.route === START) { return -1; }
         if (b.route === START) { return 1; }
         return a.route < b.route ? -1 : a.route > b.route ? 1 : 0;
