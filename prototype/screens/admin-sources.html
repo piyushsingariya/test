@@ -1,0 +1,137 @@
+<template data-screen="admin/sources" data-title="Connected sources">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 3 &middot; Dana Okafor, workspace admin</p>
+          <h1 class="title">Dana can see exactly what Vendi has read</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">Setup is done, so Vendi has read the sources for the first time. Every source says what Vendi took from it and when it last went back for more, and Dana can take one away.</p>
+
+      <ul class="steps mt-lg">
+        <li class="step step-done"><span class="step-num">&check;</span> Add to Slack</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-done"><span class="step-num">&check;</span> Invite to channels</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-done"><span class="step-num">&check;</span> Connect Notion</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-done"><span class="step-num">&check;</span> Choose what it reads</li>
+      </ul>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="console">
+        <div class="console-head">
+          <div>
+            <p class="console-title">Knowledge sources</p>
+            <p class="row-note">Northwind &middot; Vendi reads these and nothing else</p>
+          </div>
+          <span class="btn-row">
+            <button type="button" class="btn">Refresh now</button>
+            <a class="btn btn-primary" href="#/admin/notion">Connect a source</a>
+          </span>
+        </div>
+        <ul class="row-list">
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">SL</span>
+            <span>
+              <span class="row-title">Slack &middot; 4 channels read</span>
+              <span class="row-note">#general, #finance-ops, #people-ops, #support &middot; the last 12 months</span>
+              <span class="row-note">Last refreshed 6 minutes ago &middot; keeps up as messages arrive &middot; #random is off</span>
+            </span>
+            <span class="btn-row">
+              <span class="tag tag-good">Connected</span>
+              <a class="btn btn-quiet" href="#/admin/channels">Manage</a>
+            </span>
+          </li>
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">NO</span>
+            <span>
+              <span class="row-title">Notion &middot; Northwind wiki</span>
+              <span class="row-note">63 pages across Company handbook, Finance, Support, People ops</span>
+              <span class="row-note">Last refreshed 22 minutes ago &middot; re-read every hour</span>
+            </span>
+            <span class="btn-row">
+              <span class="tag tag-good">Connected</span>
+              <a class="btn btn-quiet" href="#/admin/notion">Manage</a>
+            </span>
+          </li>
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">NO</span>
+            <span>
+              <span class="row-title">Notion &middot; Engineering handbook</span>
+              <span class="row-note">31 pages &middot; last read 28 Sep, and nothing since</span>
+              <span class="row-note">Vendi lost access when the Notion connection was re-authorised. Answers from these pages have stopped.</span>
+            </span>
+            <span class="btn-row">
+              <span class="tag tag-warm">Needs attention</span>
+              <a class="btn" href="#/admin/notion">Reconnect</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="console mt-lg">
+        <div class="console-head">
+          <div>
+            <p class="console-title">Not connected</p>
+            <p class="row-note">Vendi cannot see any of these</p>
+          </div>
+        </div>
+        <ul class="row-list">
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">SL</span>
+            <span>
+              <span class="row-title">#product-private</span>
+              <span class="row-note">Private channel &middot; a member has to invite Vendi from inside it</span>
+            </span>
+            <span><button type="button" class="btn" disabled>Connect</button></span>
+          </li>
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">#</span>
+            <span>
+              <span class="row-title">#random</span>
+              <span class="row-note">Vendi is in the channel, reading is switched off</span>
+            </span>
+            <span><a class="btn btn-quiet" href="#/admin/channels">Switch on</a></span>
+          </li>
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">NO</span>
+            <span>
+              <span class="row-title">Notion &middot; Board and compensation</span>
+              <span class="row-note">Restricted in Notion &middot; deliberately left out, and Vendi cannot ask for it</span>
+            </span>
+            <span><button type="button" class="btn" disabled>Connect</button></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card mt-lg">
+        <h3 class="card-title">What Vendi will not read</h3>
+        <p class="card-body">Connecting a source does not widen what anyone can see. Vendi answers each person only from the channels and pages that person could already open themselves. Slack and Notion are the only two kinds of source it takes.</p>
+      </div>
+
+      <p class="fake-note mt-md">Sample sources, sample page counts, sample timestamps. Nothing on this screen is connected to anything. <em>Refresh now</em> does nothing; the other buttons move the walkthrough.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Sources are half of it. The other half is what Vendi did with them.</h2>
+      <p class="lede">Vendi has been answering in Slack since the first read finished. Dana can read back every answer, every summary and every wiki change, and open any one of them.</p>
+      <div class="btn-row mt-lg">
+        <a class="btn btn-primary btn-lg" href="#/admin/log">Open the activity log</a>
+        <a class="btn" href="#/admin/channels">Change what Vendi reads</a>
+      </div>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 3 &middot; screen 5 of 7 &middot; Admin</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/admin/channels">What it reads</a>
+        <a class="walk-link" href="#/admin/log">The activity log &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,99 @@
+<template data-screen="employee/shorter" data-title="Ask for it shorter">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 1 &middot; Priya, support</p>
+          <h1 class="title">&ldquo;Shorter&rdquo; &mdash; one word, in the same thread</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">She does not repeat the channel or the dates. Vendi keeps them, cuts the summary down, and says it is the same week and the same sources as before.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">#general</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/no-answer">#people-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/shorter" aria-current="page">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Apps</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/dm">Vendi</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-head">
+            <span class="slack-channel">Thread</span>
+            <span class="slack-head-note">#support &middot; the same summary, cut down</span>
+          </div>
+          <p class="slack-pane-note">Same thread as the full summary. Nothing was posted to the channel.</p>
+
+          <div class="slack-body">
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">09:04</span></p>
+                <p class="slack-text">Four things ran through #support this week. Refund timing, Monday's outage, iOS login loops, billing address edits&hellip;</p>
+                <p class="slack-meta"><a href="#/employee/summary">Read the full summary above</a></p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar" aria-hidden="true">PR</span>
+              <div>
+                <p class="slack-author">Priya Raman <span class="slack-time">09:06</span></p>
+                <p class="slack-text">shorter</p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">09:06</span></p>
+                <ul class="slack-list">
+                  <li>Refunds are two business days now, not five. The Notion page is wrong and its owner has the correction.</li>
+                  <li>Monday's outage is over and paid out. The status page wording is still wrong.</li>
+                  <li>iOS login fix shipped Thursday. Three customers still need a reply.</li>
+                </ul>
+                <p class="slack-meta">Same week, same sources</p>
+                <ul class="slack-facts">
+                  <li class="slack-fact">#support only</li>
+                  <li class="slack-fact">23&ndash;30 September</li>
+                  <li class="slack-fact">Billing-address theme dropped</li>
+                </ul>
+                <div class="slack-actions">
+                  <a class="slack-btn" href="#/employee/summary">Put it back to full</a>
+                  <a class="slack-btn slack-btn-go" href="#/employee/topic">Just the refund threads</a>
+                  <button type="button" class="slack-btn">Shorter still</button>
+                </div>
+                <p class="slack-access">Cutting it down did not open anything new. Still only #support and the pages you can open.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slack-composer">
+            <span>Reply in thread</span>
+            <button type="button" class="slack-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. &ldquo;Shorter still&rdquo; does nothing here.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 1 &middot; screen 4 of 7 &middot; Employee</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/employee/summary">&larr; The full summary</a>
+        <a class="walk-link" href="#/employee/topic">Focus it on one topic &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,117 @@
+<template data-screen="owner/proposal" data-title="A proposed wiki edit">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 2 &middot; Marco, finance ops</p>
+          <h1 class="title">Marco owns the page, so the change stops with him</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">Vendi drafted a correction from what #support settled and sent it to the page's owner as a direct message. Nothing in Notion has changed, and nothing will until Marco says yes.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/owner/proposal">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/owner/proposal">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Direct messages</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/owner/proposal" aria-current="page">Vendi</a></li>
+            <li><a class="slack-rail-item" href="#/owner/proposal">Priya Raman</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-head">
+            <span class="slack-channel">Vendi</span>
+            <span class="slack-head-note">Direct message &middot; only you and Vendi</span>
+          </div>
+
+          <div class="slack-body">
+            <p class="slack-day">Today</p>
+
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">10:44</span></p>
+                <p class="slack-text">You own <strong>Refunds policy</strong> in Notion. #support settled something today that the page states differently. Here is the edit I would make &mdash; accept it and I will apply it, decline it and I will leave the page alone.</p>
+
+                <div class="slack-card">
+                  <p class="slack-card-title">Notion &middot; Refunds policy &middot; &ldquo;Approval time&rdquo;</p>
+                  <div class="diff">
+                    <div class="diff-line diff-del">
+                      <span class="diff-sign">&minus;</span>
+                      <span class="diff-text">Refund requests are approved within five working days. Every request needs two approvers.</span>
+                    </div>
+                    <div class="diff-line diff-add">
+                      <span class="diff-sign">+</span>
+                      <span class="diff-text">Refund requests are approved within two business days. Requests under $500 are approved automatically; the rest need one approver.</span>
+                    </div>
+                  </div>
+                  <p class="slack-meta">Drawn from this conversation:</p>
+                  <ul class="source-list mt-xs">
+                    <li><a class="source-chip" href="#/employee/ask">#finance-ops &middot; 4 Sep &middot; new approval rule</a></li>
+                    <li><a class="source-chip" href="#/employee/ask">#support &middot; today &middot; Priya's question</a></li>
+                  </ul>
+                </div>
+
+                <div class="slack-actions">
+                  <a class="slack-btn slack-btn-go" href="#/owner/accepted">Accept and update the page</a>
+                  <a class="slack-btn" href="#/owner/declined">Decline</a>
+                </div>
+                <p class="slack-meta">The page is unchanged until you accept. If you decline, Vendi leaves the page alone and stops proposing this one. Click either one to see what follows.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slack-composer">
+            <span>Message Vendi</span>
+            <button type="button" class="slack-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. Accept and Decline move this walkthrough to the screen that follows; no Notion page exists behind them, and nothing is written anywhere.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="title">Marco has two answers, and a third way in</h2>
+      <p class="lede">Both answers are final for this edit. Vendi does nothing to the page on its own in either case.</p>
+      <div class="grid-3 mt-lg">
+        <a class="story-card" href="#/owner/accepted">
+          <p class="story-step">He accepts</p>
+          <h3 class="card-title">The page updated, traced back</h3>
+          <p class="card-body">Vendi writes the one section, marks the changed words, and stamps the page with who accepted it and which conversation it came from.</p>
+          <span class="story-go">Open it &rarr;</span>
+        </a>
+        <a class="story-card" href="#/owner/declined">
+          <p class="story-step">He declines</p>
+          <h3 class="card-title">Nothing changed</h3>
+          <p class="card-body">The proposal closes, Notion is untouched, and Vendi does not send this edit again. Saying why is optional.</p>
+          <span class="story-go">Open it &rarr;</span>
+        </a>
+        <a class="story-card" href="#/owner/stale">
+          <p class="story-step">Nobody asked</p>
+          <h3 class="card-title">A page that looks out of date</h3>
+          <p class="card-body">Vendi tells Marco which page looks wrong and which conversations disagree with it, before there is any edit to accept.</p>
+          <span class="story-go">Open it &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 2 &middot; screen 1 of 4 &middot; Page owner</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/owner/declined">He declines</a>
+        <a class="walk-link" href="#/owner/accepted">He accepts &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

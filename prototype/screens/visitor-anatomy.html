@@ -1,0 +1,156 @@
+<template data-screen="visitor/anatomy" data-title="Anatomy of a Vendi reply">
+  <div class="page">
+    <section class="section">
+      <p class="eyebrow">Reference</p>
+      <h1 class="title">The anatomy of a Vendi reply</h1>
+      <p class="lede">Vendi has one shape in Slack, and every screen in this walkthrough uses it: what it found, where it found it, and what you can do about it. Nothing below is a real message.</p>
+      <div class="btn-row mt-md">
+        <span class="tag tag-sample">Sample conversation — made up for this walkthrough</span>
+      </div>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="anno-layout">
+        <div class="slack">
+          <div class="slack-message">
+            <span class="slack-avatar" aria-hidden="true">PR</span>
+            <div>
+              <p class="slack-author">Priya Raman <span class="slack-time">10:42</span></p>
+              <p class="slack-text">@Vendi how long do refund requests take to approve now?</p>
+            </div>
+          </div>
+
+          <div class="slack-message">
+            <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+            <div>
+              <p class="slack-author"><span class="anno-marker">1</span> Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">10:42</span></p>
+
+              <div class="anno-part">
+                <p class="slack-text"><span class="anno-marker">2</span> Two business days, not five. Finance shortened it on 4 September: anything under $500 is auto-approved, and the rest goes to one approver instead of two.</p>
+              </div>
+
+              <div class="anno-part">
+                <p class="slack-meta"><span class="anno-marker">3</span> Read 3 sources</p>
+                <ul class="source-list mt-xs">
+                  <li><a class="source-chip" href="#/visitor/anatomy">Notion &middot; Refunds policy</a></li>
+                  <li><a class="source-chip" href="#/visitor/anatomy">#finance-ops &middot; 4 Sep</a></li>
+                  <li><a class="source-chip" href="#/visitor/anatomy">#support &middot; 12 Sep</a></li>
+                </ul>
+              </div>
+
+              <div class="anno-part">
+                <div class="slack-card">
+                  <p class="slack-card-title"><span class="anno-marker">4</span> The Notion page still says five days</p>
+                  <p class="slack-text">I can draft the correction and send it to the page's owner. I will not change the page myself.</p>
+                </div>
+              </div>
+
+              <div class="anno-part">
+                <div class="slack-actions">
+                  <span class="anno-marker">5</span>
+                  <button type="button" class="slack-btn slack-btn-go">Send the correction to Marco</button>
+                  <button type="button" class="slack-btn">Summarise this thread</button>
+                  <button type="button" class="slack-btn">Shorter</button>
+                  <button type="button" class="slack-btn">Where did this come from?</button>
+                </div>
+              </div>
+
+              <p class="slack-meta"><span class="anno-marker">6</span> Vendi answered from what Priya can already see. Only Priya sees this message until she shares it.</p>
+            </div>
+          </div>
+        </div>
+
+        <ol class="anno-list">
+          <li class="anno-item">
+            <span class="anno-marker">1</span>
+            <div>
+              <p class="anno-title">It is an app, and says so</p>
+              <p class="anno-body">Vendi posts under its own name with Slack's APP badge. It is never mistaken for a colleague.</p>
+            </div>
+          </li>
+          <li class="anno-item">
+            <span class="anno-marker">2</span>
+            <div>
+              <p class="anno-title">The answer, first and short</p>
+              <p class="anno-body">The answer comes before the reasoning, in plain words, and never sounds more certain than its sources allow.</p>
+            </div>
+          </li>
+          <li class="anno-item">
+            <span class="anno-marker">3</span>
+            <div>
+              <p class="anno-title">Every source it read</p>
+              <p class="anno-body">One chip per Notion page or Slack message, each one a link to the thing itself. The count is what Vendi actually used, not what it searched.</p>
+            </div>
+          </li>
+          <li class="anno-item">
+            <span class="anno-marker">4</span>
+            <div>
+              <p class="anno-title">What it noticed on the way</p>
+              <p class="anno-body">When the wiki disagrees with what Slack settled, Vendi says so here — and says plainly that it will not edit the page itself.</p>
+            </div>
+          </li>
+          <li class="anno-item">
+            <span class="anno-marker">5</span>
+            <div>
+              <p class="anno-title">What you can do next</p>
+              <p class="anno-body">Two to four actions, never more. The one that changes something outside Slack is the green one, and it only ever proposes.</p>
+            </div>
+          </li>
+          <li class="anno-item">
+            <span class="anno-marker">6</span>
+            <div>
+              <p class="anno-title">Who can see it, and what it could see</p>
+              <p class="anno-body">The last line says whether the reply is private, and confirms Vendi answered only from content the asker already has access to.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="title">The same shape when Vendi does not know</h2>
+      <p class="lede">No source, no answer. It says what it looked at and who is likely to know, and offers nothing else.</p>
+
+      <div class="slack mt-lg">
+        <div class="slack-message">
+          <span class="slack-avatar" aria-hidden="true">TO</span>
+          <div>
+            <p class="slack-author">Tomas Oduya <span class="slack-time">14:08</span></p>
+            <p class="slack-text">@Vendi what's our parental leave policy in Portugal?</p>
+          </div>
+        </div>
+        <div class="slack-message">
+          <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+          <div>
+            <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">14:08</span></p>
+            <p class="slack-text">I don't know. Nothing I can read covers parental leave outside the UK and Germany, and I'd rather say that than guess.</p>
+            <p class="slack-meta">Looked at: Notion &middot; People handbook, and #people-ops since January. Nothing on Portugal.</p>
+            <div class="slack-actions">
+              <button type="button" class="slack-btn">Ask in #people-ops</button>
+              <button type="button" class="slack-btn">Tell me when a page covers this</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-lg">
+        <article class="card">
+          <h3 class="card-title">What Vendi never puts in a reply</h3>
+          <p class="card-body">A confidence score, an apology, a source it did not read, or an answer drawn from a channel or page the person asking cannot open themselves.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">Every button here is fake</h3>
+          <p class="card-body">This is a drawing of a Slack message, not Slack. The buttons on this screen do nothing at all.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Reference &middot; not part of a story</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/visitor/design">Design language &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

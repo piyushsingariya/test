@@ -1,0 +1,135 @@
+<template data-screen="admin/channels" data-title="Choose what it reads">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 3 &middot; Dana Okafor, workspace admin</p>
+          <h1 class="title">Dana decides which channels Vendi actually reads</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">Anyone can invite Vendi to a channel. Reading it is a separate switch, and it is the admin's. Vendi has read nothing at all until Dana saves this screen.</p>
+
+      <ul class="steps mt-lg">
+        <li class="step step-done"><span class="step-num">&check;</span> Add to Slack</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-done"><span class="step-num">&check;</span> Invite to channels</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-done"><span class="step-num">&check;</span> Connect Notion</li>
+        <li class="step-arrow" aria-hidden="true">&rarr;</li>
+        <li class="step step-now"><span class="step-num">4</span> Choose what it reads</li>
+      </ul>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="console">
+        <div class="console-head">
+          <div>
+            <p class="console-title">Slack channels Vendi reads</p>
+            <p class="row-note">Northwind &middot; Vendi is in 5 channels &middot; nothing read yet</p>
+          </div>
+          <span class="field">
+            <span class="field-label">How far back</span>
+            <select class="select">
+              <option>The last 12 months</option>
+              <option>The last 6 months</option>
+              <option>The last 3 months</option>
+              <option>Everything in the channel</option>
+            </select>
+          </span>
+        </div>
+        <ul class="choice-list">
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-support" checked>
+            <span>
+              <label class="choice-title" for="read-support">#support</label>
+              <span class="choice-note">31 members &middot; where refund and policy questions land</span>
+            </span>
+            <span><span class="tag tag-quiet">Not read yet</span></span>
+          </li>
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-finance" checked>
+            <span>
+              <label class="choice-title" for="read-finance">#finance-ops</label>
+              <span class="choice-note">12 members &middot; where the approval rule was settled</span>
+            </span>
+            <span><span class="tag tag-quiet">Not read yet</span></span>
+          </li>
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-people" checked>
+            <span>
+              <label class="choice-title" for="read-people">#people-ops</label>
+              <span class="choice-note">9 members &middot; leave, onboarding, equipment</span>
+            </span>
+            <span><span class="tag tag-quiet">Not read yet</span></span>
+          </li>
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-general" checked>
+            <span>
+              <label class="choice-title" for="read-general">#general</label>
+              <span class="choice-note">64 members &middot; announcements everyone can see</span>
+            </span>
+            <span><span class="tag tag-quiet">Not read yet</span></span>
+          </li>
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-random">
+            <span>
+              <label class="choice-title" for="read-random">#random</label>
+              <span class="choice-note">Vendi is in this channel but Dana is leaving it off &mdash; nothing gets decided here, and lunch plans are not company knowledge.</span>
+            </span>
+            <span><span class="tag tag-quiet">Off</span></span>
+          </li>
+          <li class="choice">
+            <input type="checkbox" class="check" id="read-private" disabled>
+            <span>
+              <label class="choice-title" for="read-private">#product-private</label>
+              <span class="choice-note">Vendi is not a member. A member has to invite it inside the channel before this can be switched on.</span>
+            </span>
+            <span><span class="tag tag-warm">Not a member</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="console mt-lg">
+        <div class="console-head">
+          <div>
+            <p class="console-title">The wiki</p>
+            <p class="row-note">Chosen on the Notion screen, shown here so it is in one place</p>
+          </div>
+          <a class="btn btn-quiet" href="#/admin/notion">Change the pages</a>
+        </div>
+        <ul class="row-list">
+          <li class="row">
+            <span class="row-mark" aria-hidden="true">NO</span>
+            <span>
+              <span class="row-title">Notion &middot; Northwind wiki</span>
+              <span class="row-note">63 pages across Company handbook, Finance, Support, People ops &middot; Engineering handbook and Board and compensation left out</span>
+            </span>
+            <span><span class="tag tag-good">Selected</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card mt-lg">
+        <h3 class="card-title">Switching a channel on does not let anyone see more</h3>
+        <p class="card-body">Vendi reading #finance-ops does not mean it will quote #finance-ops to somebody who is not in it. Every answer is filtered to what the person asking could open themselves. Turning a channel off later stops new reading from that moment; what Vendi already answered stays in the activity log.</p>
+      </div>
+
+      <div class="btn-row mt-lg">
+        <a class="btn btn-primary btn-lg" href="#/admin/sources">Save and start reading</a>
+        <a class="btn" href="#/admin/notion">Back</a>
+        <span class="tag tag-fake">Prototype &mdash; nothing saves</span>
+      </div>
+      <p class="fake-note mt-xs">The checkboxes and the dropdown work as controls but store nothing. <em>Save and start reading</em> moves the walkthrough to the sources screen, where the first read has already happened.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 3 &middot; screen 4 of 7 &middot; Admin</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
+        <a class="walk-link" href="#/admin/notion">Connecting Notion</a>
+        <a class="walk-link" href="#/admin/sources">What Vendi has read &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

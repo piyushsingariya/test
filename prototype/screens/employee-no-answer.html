@@ -1,0 +1,115 @@
+<template data-screen="employee/no-answer" data-title="When Vendi doesn't know">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 1 &middot; Priya, support</p>
+          <h1 class="title">The company's knowledge does not cover the question</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">This is the screen the whole product rests on. Vendi says it does not know, shows where it looked, and offers the two pages that came close without pretending either one answers her.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">#general</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/no-answer" aria-current="page">#people-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/summary">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Apps</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/dm">Vendi</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-head">
+            <span class="slack-channel">#people-ops</span>
+            <span class="slack-head-note">61 members &middot; Vendi is in this channel</span>
+          </div>
+
+          <div class="slack-body">
+            <p class="slack-day">Today</p>
+
+            <div class="slack-message">
+              <span class="slack-avatar" aria-hidden="true">PR</span>
+              <div>
+                <p class="slack-author">Priya Raman <span class="slack-time">11:20</span></p>
+                <p class="slack-text">@Vendi how much unused leave can I carry into next year?</p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">11:20</span></p>
+                <p class="slack-text">I don't know. Nothing I can read for you says what happens to unused leave at year end.</p>
+                <p class="slack-meta">Where I looked</p>
+                <ul class="slack-facts">
+                  <li class="slack-fact">Notion &middot; People handbook &middot; 34 pages</li>
+                  <li class="slack-fact">#people-ops &middot; 2 years</li>
+                  <li class="slack-fact">#general &middot; 2 years</li>
+                  <li class="slack-fact">Last refreshed 30 Sep, 08:15</li>
+                </ul>
+                <div class="slack-card slack-card-warm">
+                  <p class="slack-card-title">Two pages came close, and neither answers it</p>
+                  <p class="slack-text">The leave policy sets how many days you get and how to book them. It stops before year end. A 2023 thread mentions a carry-over cap, and then the thread is about something else &mdash; I will not treat that as the answer.</p>
+                  <ul class="source-list mt-xs">
+                    <li><a class="source-chip" href="#/employee/no-answer">Notion &middot; Leave policy</a></li>
+                    <li><a class="source-chip" href="#/employee/no-answer">#people-ops &middot; 14 Nov 2023</a></li>
+                  </ul>
+                </div>
+                <p class="slack-text mt-sm">Ask in this channel &mdash; People Ops read it. If someone answers here, I will offer to write it onto the Leave policy page for its owner to accept.</p>
+                <div class="slack-actions">
+                  <button type="button" class="slack-btn">Ask the channel for me</button>
+                  <button type="button" class="slack-btn">Tell an admin this is missing</button>
+                  <a class="slack-btn" href="#/employee/ask">See a question it can answer</a>
+                </div>
+                <p class="slack-access">I only search what you can see. If a channel you are not in or a page you cannot open covers this, it is not in my answer and I will not hint that it exists.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slack-composer">
+            <span>Message #people-ops</span>
+            <button type="button" class="slack-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. The two buttons on Vendi's reply do nothing here.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="title">What this screen is holding to</h2>
+      <div class="grid-3 mt-lg">
+        <article class="card">
+          <h3 class="card-title">It says the words</h3>
+          <p class="card-body">&ldquo;I don't know&rdquo; comes first, before anything that might read as an answer.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">It shows its search</h3>
+          <p class="card-body">Which sources, how far back, and when they were last refreshed &mdash; so a person can tell a gap from a stale index.</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">It offers the near miss as a near miss</h3>
+          <p class="card-body">The two pages are labelled as close and not the answer. No guess, no stitched-together inference.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 1 &middot; screen 6 of 7 &middot; Employee</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/employee/topic">&larr; One topic only</a>
+        <a class="walk-link" href="#/employee/dm">The same thing in a DM &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

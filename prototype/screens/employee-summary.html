@@ -1,0 +1,105 @@
+<template data-screen="employee/summary" data-title="Summarise a channel">
+  <div class="page">
+    <section class="section">
+      <div class="btn-row btn-row-spread">
+        <div>
+          <p class="eyebrow">Story 1 &middot; Priya, support</p>
+          <h1 class="title">Priya asks for a week of #support in one read</h1>
+        </div>
+        <span class="tag tag-sample">Sample workspace &mdash; made up for this walkthrough</span>
+      </div>
+      <p class="lede">She was out for a week. She names the channel and the stretch of time in her own words, and Vendi answers in a thread with what it covered written under the summary.</p>
+    </section>
+
+    <section class="section section-sunken">
+      <div class="slack-window">
+        <div class="slack-rail">
+          <p class="slack-team">Northwind</p>
+          <p class="slack-rail-label">Channels</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/ask">#general</a></li>
+            <li><a class="slack-rail-item" href="#/employee/ask">#finance-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/no-answer">#people-ops</a></li>
+            <li><a class="slack-rail-item" href="#/employee/summary" aria-current="page">#support</a></li>
+          </ul>
+          <p class="slack-rail-label">Apps</p>
+          <ul class="slack-rail-list">
+            <li><a class="slack-rail-item" href="#/employee/dm">Vendi</a></li>
+          </ul>
+        </div>
+
+        <div class="slack-main">
+          <div class="slack-head">
+            <span class="slack-channel">Thread</span>
+            <span class="slack-head-note">#support &middot; the summary Priya asked for</span>
+          </div>
+          <p class="slack-pane-note">In a thread, so the channel is not filled with a summary only one person asked for.</p>
+
+          <div class="slack-body">
+            <div class="slack-message">
+              <span class="slack-avatar" aria-hidden="true">PR</span>
+              <div>
+                <p class="slack-author">Priya Raman <span class="slack-time">09:04</span></p>
+                <p class="slack-text">@Vendi I was out all week. Summarise #support for the last 7 days &mdash; what did I miss?</p>
+              </div>
+            </div>
+
+            <div class="slack-message">
+              <span class="slack-avatar slack-avatar-vendi" aria-hidden="true">V</span>
+              <div>
+                <p class="slack-author">Vendi <span class="slack-app-badge">APP</span> <span class="slack-time">09:04</span></p>
+                <p class="slack-text">Four things ran through #support this week.</p>
+                <ul class="slack-list">
+                  <li><strong>Refund timing.</strong> Finance shortened approval to two business days; under $500 is auto-approved. The Notion page still says five days, so I sent a correction to its owner.</li>
+                  <li><strong>Monday's payments outage.</strong> Queued refunds retried on their own, two double charges were reversed by hand. The status page wording is still not updated.</li>
+                  <li><strong>Login loops on iOS.</strong> Engineering shipped a fix on Thursday. Three customers who reported it have not been written back to.</li>
+                  <li><strong>Editing a billing address.</strong> Asked four times, answered four times by Ade, written down nowhere.</li>
+                </ul>
+                <p class="slack-meta">What I covered</p>
+                <ul class="slack-facts">
+                  <li class="slack-fact">#support only</li>
+                  <li class="slack-fact">23&ndash;30 September</li>
+                  <li class="slack-fact">412 messages</li>
+                  <li class="slack-fact">63 threads</li>
+                  <li class="slack-fact">4 themes</li>
+                </ul>
+                <p class="slack-meta">Leaned on 3 sources outside the channel</p>
+                <ul class="source-list mt-xs">
+                  <li><a class="source-chip" href="#/employee/ask">Notion &middot; Refunds policy</a></li>
+                  <li><a class="source-chip" href="#/employee/ask">Notion &middot; iOS known issues</a></li>
+                  <li><a class="source-chip" href="#/employee/ask">#finance-ops &middot; 24 Sep</a></li>
+                </ul>
+                <div class="slack-card slack-card-quiet">
+                  <p class="slack-card-title">Not sure this is what you wanted?</p>
+                  <p class="slack-text">Ask me for it shorter or longer, or name one topic and I will do that one only.</p>
+                </div>
+                <div class="slack-actions">
+                  <a class="slack-btn slack-btn-go" href="#/employee/shorter">Shorter</a>
+                  <a class="slack-btn" href="#/employee/topic">Just the refund threads</a>
+                  <button type="button" class="slack-btn">Longer</button>
+                  <button type="button" class="slack-btn">Change the dates</button>
+                </div>
+                <p class="slack-access">I read #support and the Notion pages you can open. Channels you are not in and pages you cannot open are not in this summary, and I will not tell you what is in them.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slack-composer">
+            <span>Reply in thread</span>
+            <button type="button" class="slack-send">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="fake-note mt-md">A drawing of Slack, not Slack. Every count, theme and date here is sample data. Longer and change-the-dates do nothing on this screen; shorter and one-topic are the next two screens.</p>
+    </section>
+
+    <div class="walk-foot">
+      <span class="walk-foot-note">Story 1 &middot; screen 3 of 7 &middot; Employee</span>
+      <span class="walk-foot-links">
+        <a class="walk-link walk-link-home" href="#/employee/thread">&larr; Summarise a thread</a>
+        <a class="walk-link" href="#/employee/shorter">Ask for it shorter &rarr;</a>
+      </span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vendi — prototype walkthrough</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="shell-rail">
+        <a class="brand" href="#/visitor/home">
+          <span class="brand-mark" aria-hidden="true">V</span>
+          <span>
+            <span class="brand-name">Vendi</span><br>
+            <span class="brand-sub">Back to the start</span>
+          </span>
+        </a>
+
+        <p class="prototype-note">A clickable walkthrough, not the app. Nothing here connects to Slack or Notion, and every answer, summary and source is made up for the walkthrough.</p>
+
+        <nav id="index" aria-label="Screens"></nav>
+      </aside>
+
+      <main class="shell-main">
+        <div class="shell-bar">
+          <span class="shell-bar-title" id="screen-title">Vendi</span>
+          <span class="shell-bar-persona" id="screen-persona"></span>
+        </div>
+        <div class="stage" id="stage" data-platform="desktop">
+          <div class="stage-frame" data-mount></div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      var START = "visitor/home";
+
+      var ORDER = [
+        "visitor/home",
+        "employee/ask",
+        "employee/thread",
+        "employee/summary",
+        "employee/shorter",
+        "employee/topic",
+        "employee/no-answer",
+        "employee/dm",
+        "owner/proposal",
+        "owner/accepted",
+        "owner/declined",
+        "owner/stale",
+        "admin/install",
+        "admin/invite",
+        "admin/notion",
+        "admin/channels",
+        "admin/sources",
+        "admin/log",
+        "admin/entry",
+        "visitor/anatomy",
+        "visitor/design"
+      ];
+
+      var PERSONAS = {
+        visitor: { label: "Visitor", platform: "desktop" },
+        employee: { label: "Employee", platform: "desktop" },
+        owner: { label: "Page owner", platform: "desktop" },
+        admin: { label: "Admin", platform: "desktop" }
+      };
+
+      var templates = Array.prototype.slice.call(
+        document.querySelectorAll("template[data-screen]")
+      );
+
+      var screens = templates.map(function (template) {
+        var route = String(template.getAttribute("data-screen") || "");
+        var parts = route.split("/");
+        return {
+          route: route,
+          persona: parts[0] || "",
+          name: parts[1] || "",
+          title: template.getAttribute("data-title") || route,
+          template: template
+        };
+      });
+
+      var byRoute = {};
+      screens.forEach(function (screen) {
+        byRoute[screen.route] = screen;
+      });
+
+      var mount = document.querySelector("[data-mount]");
+      var stage = document.getElementById("stage");
+      var titleEl = document.getElementById("screen-title");
+      var personaEl = document.getElementById("screen-persona");
+      var indexEl = document.getElementById("index");
+
+      function personaOf(id) {
+        return PERSONAS[id] || { label: id || "Screens", platform: "desktop" };
+      }
+
+      function buildIndex() {
+        indexEl.textContent = "";
+
+        if (!screens.length) {
+          var empty = document.createElement("p");
+          empty.className = "index-empty";
+          empty.textContent = "No screens yet.";
+          indexEl.appendChild(empty);
+          return;
+        }
+
+        var order = Object.keys(PERSONAS).filter(function (id) {
+          return screens.some(function (screen) {
+            return screen.persona === id;
+          });
+        });
+
+        screens.forEach(function (screen) {
+          if (order.indexOf(screen.persona) === -1) {
+            order.push(screen.persona);
+          }
+        });
+
+        order.forEach(function (id) {
+          var group = document.createElement("div");
+          group.className = "index-group";
+
+          var label = document.createElement("p");
+          label.className = "index-label";
+          label.textContent = personaOf(id).label;
+          group.appendChild(label);
+
+          var list = document.createElement("ul");
+          list.className = "index-list";
+
+          screens
+            .filter(function (screen) {
+              return screen.persona === id;
+            })
+            .forEach(function (screen) {
+              var item = document.createElement("li");
+              var link = document.createElement("a");
+              link.className = "index-link";
+              link.href = "#/" + screen.route;
+              link.textContent = screen.title;
+              link.setAttribute("data-route", screen.route);
+              item.appendChild(link);
+              list.appendChild(item);
+            });
+
+          group.appendChild(list);
+          indexEl.appendChild(group);
+        });
+      }
+
+      function routeFromHash() {
+        var hash = String(location.hash || "").replace(/^#\/?/, "");
+        return hash.split("?")[0];
+      }
+
+      function show() {
+        if (!screens.length) {
+          return;
+        }
+
+        var screen = byRoute[routeFromHash()] || byRoute[START] || screens[0];
+        var persona = personaOf(screen.persona);
+
+        mount.replaceChildren(screen.template.content.cloneNode(true));
+        stage.setAttribute("data-platform", persona.platform);
+        titleEl.textContent = screen.title;
+        personaEl.textContent = persona.label;
+        document.title = "Vendi — " + screen.title;
+        stage.scrollTop = 0;
+        window.scrollTo(0, 0);
+
+        Array.prototype.forEach.call(
+          indexEl.querySelectorAll(".index-link"),
+          function (link) {
+            if (link.getAttribute("data-route") === screen.route) {
+              link.setAttribute("aria-current", "page");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          }
+        );
+      }
+
+      screens.sort(function (a, b) {
+        var order = Object.keys(PERSONAS);
+        var pa = order.indexOf(a.persona);
+        var pb = order.indexOf(b.persona);
+        if (pa === -1) { pa = order.length; }
+        if (pb === -1) { pb = order.length; }
+        if (pa !== pb) { return pa - pb; }
+        var oa = ORDER.indexOf(a.route);
+        var ob = ORDER.indexOf(b.route);
+        if (oa === -1) { oa = ORDER.length; }
+        if (ob === -1) { ob = ORDER.length; }
+        if (oa !== ob) { return oa - ob; }
+        if (a.route === START) { return -1; }
+        if (b.route === START) { return 1; }
+        return a.route < b.route ? -1 : a.route > b.route ? 1 : 0;
+      });
+
+      buildIndex();
+      show();
+      window.addEventListener("hashchange", show);
+    </script>
+  </body>
+</html>
