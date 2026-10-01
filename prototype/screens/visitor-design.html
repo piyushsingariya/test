@@ -1,280 +1,82 @@
 <template data-screen="visitor/design" data-title="Design language">
-  <div class="page">
-    <section class="section">
-      <p class="eyebrow">Reference</p>
-      <h1 class="title">Vendi's design language</h1>
-      <p class="lede">Warm paper, deep ink, one indigo accent. Vendi is a coworker, not a chatbot: the screens read like a well-set document, and the only saturated colour on a screen is the thing you are meant to act on. Slack's own colours are kept in a separate set, so Vendi's surfaces and Slack's never blur into each other.</p>
-    </section>
-
-    <section class="section section-sunken">
-      <h2 class="title">Colour</h2>
-      <p class="lede">Every colour on every screen is one of these. No screen uses a colour that is not named here.</p>
-
-      <h3 class="card-title mt-lg">Paper and ink</h3>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-bg"></div>
-          <div class="swatch-body"><span class="token">--color-bg</span><span class="swatch-use">Behind everything</span></div>
+    <div class="site">
+      <header class="masthead">
+        <div class="masthead-inner">
+          <a class="wordmark" href="#/visitor/home">Piyush Singariya</a>
+          <nav class="nav" aria-label="Sections">
+            <a class="nav-link" href="#/visitor/work">Work</a>
+            <a class="nav-link" href="#/visitor/writing">Writing</a>
+            <a class="nav-link" href="#/visitor/cv">CV</a>
+          </nav>
+          <a class="btn btn-ink" href="#/visitor/contact"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg> Get in touch</a>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-surface"></div>
-          <div class="swatch-body"><span class="token">--color-surface</span><span class="swatch-use">Cards, panels, pages</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-sunken"></div>
-          <div class="swatch-body"><span class="token">--color-surface-sunken</span><span class="swatch-use">A section set back</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-line"></div>
-          <div class="swatch-body"><span class="token">--color-line</span><span class="swatch-use">Every border</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink"></div>
-          <div class="swatch-body"><span class="token">--color-ink</span><span class="swatch-use">Headings and body</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink-soft"></div>
-          <div class="swatch-body"><span class="token">--color-ink-soft</span><span class="swatch-use">Supporting text</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-ink-faint"></div>
-          <div class="swatch-body"><span class="token">--color-ink-faint</span><span class="swatch-use">Timestamps, notes</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-accent-soft"></div>
-          <div class="swatch-body"><span class="token">--color-accent-soft</span><span class="swatch-use">Source chips, selection</span></div>
+      </header>
+      <div class="obi">
+        <div class="obi-inner">
+          <span class="obi-label">Open to</span>
+          <p class="obi-value">Senior backend and infrastructure roles, contract work on storage and observability, and an argument about query planners whenever one is going.</p>
+          <span class="flag flag-on-accent">Sample wording: Piyush to confirm</span>
         </div>
       </div>
-
-      <h3 class="card-title mt-lg">Accent and meaning</h3>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-accent"></div>
-          <div class="swatch-body"><span class="token">--color-accent</span><span class="swatch-use">Vendi itself, and the one action</span></div>
+      <main class="page">
+        <h1 class="section-title">How this site is drawn</h1>
+        <p class="lede">A tankōbon volume about one engineer: pulp paper, hard ink rules, one spot of press red, and the structure of a shonen databook: the page that says what this character actually did, as against what his party did.</p>
+        <div class="panel">
+          <p class="panel-title">Colour: restrained, one hue</p>
+          <div class="prose"><p>Paper and press black carry the site. The red only marks what is live: what he is open to, the section you are on, the action, and the line that says what he personally did. Nothing else is coloured.</p></div>
+          <ul class="swatches">
+            <li><div class="swatch sw-paper"></div><span class="swatch-name">Paper</span><span class="swatch-job">The page. Pulp, slightly green-grey, not cream.</span></li>
+            <li><div class="swatch sw-panel"></div><span class="swatch-name">Panel</span><span class="swatch-job">The brighter stock a panel is printed on.</span></li>
+            <li><div class="swatch sw-ink"></div><span class="swatch-name">Ink</span><span class="swatch-job">Press black. Every word and every rule.</span></li>
+            <li><div class="swatch sw-red"></div><span class="swatch-name">Press red</span><span class="swatch-job">Availability, current section, action.</span></li>
+            <li><div class="swatch sw-tone"></div><span class="swatch-name">Tone</span><span class="swatch-job">Screentone fill and sunken areas.</span></li>
+            <li><div class="swatch sw-pencil"></div><span class="swatch-name">Pencil</span><span class="swatch-job">Secondary text and the credit block.</span></li>
+          </ul>
         </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-good"></div>
-          <div class="swatch-body"><span class="token">--color-good</span><span class="swatch-use">Accepted, connected, added text</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-warm"></div>
-          <div class="swatch-body"><span class="token">--color-warm</span><span class="swatch-use">Out of date, removed text</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-warn"></div>
-          <div class="swatch-body"><span class="token">--color-warn</span><span class="swatch-use">Sample data, needs a look</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-fake"></div>
-          <div class="swatch-body"><span class="token">--color-fake</span><span class="swatch-use">This is a prototype, not the app</span></div>
-        </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Slack's colours, kept separate</h3>
-      <p class="card-body">Used only inside a Slack window, never on one of Vendi's own surfaces.</p>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-rail"></div>
-          <div class="swatch-body"><span class="token">--color-slack-rail</span><span class="swatch-use">Slack's sidebar</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-active"></div>
-          <div class="swatch-body"><span class="token">--color-slack-rail-active</span><span class="swatch-use">The open channel</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-slack-line"></div>
-          <div class="swatch-body"><span class="token">--color-slack-line</span><span class="swatch-use">Slack's dividers</span></div>
-        </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Notion's colours, kept separate</h3>
-      <p class="card-body">Used only inside a drawing of a wiki page, never on one of Vendi's own surfaces.</p>
-      <div class="swatch-grid mt-sm">
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-rail"></div>
-          <div class="swatch-body"><span class="token">--color-notion-rail</span><span class="swatch-use">Notion's sidebar</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-line"></div>
-          <div class="swatch-body"><span class="token">--color-notion-line</span><span class="swatch-use">Notion's dividers</span></div>
-        </div>
-        <div class="swatch">
-          <div class="swatch-chip swatch-chip-notion-mark"></div>
-          <div class="swatch-body"><span class="token">--color-notion-mark</span><span class="swatch-use">Words Vendi changed</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="title">Type</h2>
-      <p class="lede">One family on Vendi's own screens, and Slack's own face inside a Slack window, so a message never looks like part of Vendi's interface.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Style</th>
-            <th scope="col">Token</th>
-            <th scope="col">Used for</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="display">Vendi knows</span></td>
-            <td><span class="token">--font-size-3xl</span> / bold</td>
-            <td>One headline per landing screen. Nothing else.</td>
-          </tr>
-          <tr>
-            <td><span class="title">Section heading</span></td>
-            <td><span class="token">--font-size-xl</span> / bold</td>
-            <td>The heading of a section.</td>
-          </tr>
-          <tr>
-            <td><span class="subtitle">A standfirst under the headline</span></td>
-            <td><span class="token">--font-size-lg</span> / normal</td>
-            <td>The line that explains the headline.</td>
-          </tr>
-          <tr>
-            <td>Body copy sits at the base size.</td>
-            <td><span class="token">--font-size-md</span> / normal</td>
-            <td>Everything read at length, and every Slack message.</td>
-          </tr>
-          <tr>
-            <td><span class="card-body">Supporting copy inside a card.</span></td>
-            <td><span class="token">--font-size-sm</span> / normal</td>
-            <td>Cards, table cells, buttons, index.</td>
-          </tr>
-          <tr>
-            <td><span class="fake-note">Timestamps, sources, prototype notes</span></td>
-            <td><span class="token">--font-size-xs</span> / normal</td>
-            <td>Metadata, tags, and anything admitting this is fake.</td>
-          </tr>
-          <tr>
-            <td><span class="eyebrow">An eyebrow</span></td>
-            <td><span class="token">--font-size-xs</span> / medium, tracked</td>
-            <td>The label above a headline.</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="fake-note mt-md">Faces: <span class="token">--font-sans</span> Inter on Vendi's screens, <span class="token">--font-slack</span> Lato inside a Slack window, <span class="token">--font-mono</span> for token names. Each falls back to the system face; the prototype loads no font from the web.</p>
-    </section>
-
-    <section class="section section-sunken">
-      <h2 class="title">Spacing</h2>
-      <p class="lede">Nine steps. Every gap, pad and margin in the walkthrough is one of them.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Step</th>
-            <th scope="col">Size</th>
-            <th scope="col">Where it is used</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><span class="space-bar space-bar-3xs"></span></td><td><span class="token">--space-3xs</span> 2px</td><td>Between a label and its icon.</td></tr>
-          <tr><td><span class="space-bar space-bar-2xs"></span></td><td><span class="token">--space-2xs</span> 4px</td><td>Between source chips.</td></tr>
-          <tr><td><span class="space-bar space-bar-xs"></span></td><td><span class="token">--space-xs</span> 8px</td><td>Inside a Slack message row.</td></tr>
-          <tr><td><span class="space-bar space-bar-sm"></span></td><td><span class="token">--space-sm</span> 12px</td><td>Button padding, row padding.</td></tr>
-          <tr><td><span class="space-bar space-bar-md"></span></td><td><span class="token">--space-md</span> 16px</td><td>Card padding, grid gaps.</td></tr>
-          <tr><td><span class="space-bar space-bar-lg"></span></td><td><span class="token">--space-lg</span> 24px</td><td>Between a heading and what follows.</td></tr>
-          <tr><td><span class="space-bar space-bar-xl"></span></td><td><span class="token">--space-xl</span> 32px</td><td>Between blocks in a section.</td></tr>
-          <tr><td><span class="space-bar space-bar-2xl"></span></td><td><span class="token">--space-2xl</span> 48px</td><td>Section padding.</td></tr>
-          <tr><td><span class="space-bar space-bar-3xl"></span></td><td><span class="token">--space-3xl</span> 72px</td><td>The tallest opening section.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section">
-      <h2 class="title">Buttons</h2>
-      <p class="lede">One primary action per screen at most. Everything else is quiet. The states below are drawn standing still — hover and focus are real on the live buttons too.</p>
-      <table class="spec-table mt-lg">
-        <thead>
-          <tr>
-            <th scope="col">Kind</th>
-            <th scope="col">Default</th>
-            <th scope="col">Hover</th>
-            <th scope="col">Focus</th>
-            <th scope="col">Disabled</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Primary &mdash; the one thing to do</td>
-            <td><button type="button" class="btn btn-primary">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary is-hover">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary is-focus">Connect Notion</button></td>
-            <td><button type="button" class="btn btn-primary" disabled>Connect Notion</button></td>
-          </tr>
-          <tr>
-            <td>Secondary &mdash; a real alternative</td>
-            <td><button type="button" class="btn">Decline</button></td>
-            <td><button type="button" class="btn is-hover">Decline</button></td>
-            <td><button type="button" class="btn is-focus">Decline</button></td>
-            <td><button type="button" class="btn" disabled>Decline</button></td>
-          </tr>
-          <tr>
-            <td>Quiet &mdash; a way out</td>
-            <td><button type="button" class="btn btn-quiet">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet is-hover">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet is-focus">Not now</button></td>
-            <td><button type="button" class="btn btn-quiet" disabled>Not now</button></td>
-          </tr>
-          <tr>
-            <td>Inside Slack &mdash; Slack's own shape</td>
-            <td><button type="button" class="slack-btn slack-btn-go">Accept</button></td>
-            <td><button type="button" class="slack-btn">Shorter</button></td>
-            <td><button type="button" class="slack-btn">Show sources</button></td>
-            <td><span class="fake-note">Slack draws its own disabled state.</span></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="fake-note mt-md">Large is <span class="token">.btn-lg</span>, for a landing page only. A button that would do something real in the app does nothing here.</p>
-    </section>
-
-    <section class="section section-sunken">
-      <h2 class="title">Corners, shadow and labels</h2>
-      <div class="grid-2 mt-lg">
-        <div class="card">
-          <h3 class="card-title">Radius</h3>
-          <table class="spec-table mt-sm">
+        <div class="panel">
+          <p class="panel-title">Type: two faces, 1.25 between steps</p>
+          <table class="scale">
+            <thead><tr><th>Specimen</th><th>Job</th><th>Size</th></tr></thead>
             <tbody>
-              <tr><td><span class="radius-box radius-box-xs"></span></td><td><span class="token">--radius-xs</span> chips, Slack buttons</td></tr>
-              <tr><td><span class="radius-box radius-box-sm"></span></td><td><span class="token">--radius-sm</span> buttons, inputs</td></tr>
-              <tr><td><span class="radius-box radius-box-md"></span></td><td><span class="token">--radius-md</span> cards, panels</td></tr>
-              <tr><td><span class="radius-box radius-box-lg"></span></td><td><span class="token">--radius-lg</span> a whole page</td></tr>
-              <tr><td><span class="radius-box radius-box-pill"></span></td><td><span class="token">--radius-pill</span> tags, markers</td></tr>
+              <tr><td class="spec-4xl">Singariya</td><td>Bowlby One SC, the cover logo on the landing screen</td><td>3.815rem</td></tr>
+              <tr><td class="spec-2xl">The work</td><td>Bowlby One SC, section titles</td><td>2.441rem</td></tr>
+              <tr><td class="spec-md">What I did on it</td><td>M PLUS 2 medium, lede and panel titles</td><td>1.25rem</td></tr>
+              <tr><td class="spec-base">He designed the storage engine and shipped it.</td><td>M PLUS 2 regular, body at 65 to 75 characters a line</td><td>1rem</td></tr>
+              <tr><td class="spec-sm">Sample wording: Piyush to confirm</td><td>M PLUS 2 small, captions, flags and the credit block</td><td>0.8rem</td></tr>
+              <tr><td class="spec-mono">gear6io/gear6 a3f91c2 412ms</td><td>M PLUS 1 Code, short SHAs, paths and durations. Never a label.</td><td>0.8rem</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="card">
-          <h3 class="card-title">Shadow</h3>
-          <p class="card-body">Barely there. Depth comes from the borders, not the shadows.</p>
-          <table class="spec-table mt-sm">
-            <tbody>
-              <tr><td><span class="shadow-box shadow-box-sm"></span></td><td><span class="token">--shadow-sm</span> a resting panel</td></tr>
-              <tr><td><span class="shadow-box shadow-box-md"></span></td><td><span class="token">--shadow-md</span> something lifted under the cursor</td></tr>
-              <tr><td><span class="shadow-box shadow-box-lg"></span></td><td><span class="token">--shadow-lg</span> a dialog over the screen</td></tr>
-            </tbody>
-          </table>
+        <div class="panel">
+          <p class="panel-title">Space and shape</p>
+          <div class="prose"><p>Radius is zero everywhere: a printed page has no rounded corners. A surface is set apart by a 2px ink rule, never by a soft shadow. The one exception is the portrait on the landing screen, which has a flat offset ink shadow and no border, the way a photo is tipped onto a page. One column of panels, never a grid of cards.</p></div>
+          <ul class="ruler">
+            <li><i class="r-1"></i><span>4px, inside a label</span></li>
+            <li><i class="r-2"></i><span>8px, between an icon and its word</span></li>
+            <li><i class="r-4"></i><span>16px, between lines of a paragraph block</span></li>
+            <li><i class="r-6"></i><span>24px, inside a panel</span></li>
+            <li><i class="r-7"></i><span>32px, between panels</span></li>
+            <li><i class="r-10"></i><span>64px, between sections of a screen</span></li>
+          </ul>
         </div>
-      </div>
-
-      <h3 class="card-title mt-lg">Labels</h3>
-      <div class="btn-row mt-sm">
-        <span class="tag">Neutral</span>
-        <span class="tag tag-good">Connected</span>
-        <span class="tag tag-warm">Out of date</span>
-        <span class="tag tag-sample">Sample data</span>
-        <span class="tag tag-fake">Prototype &mdash; does nothing</span>
-        <span class="source-chip">Notion &middot; a source Vendi read</span>
-      </div>
-      <p class="fake-note mt-md">The purple prototype label appears on every control that would do something real in the app, so nobody clicking through mistakes a drawing for a working feature.</p>
-    </section>
-
-    <div class="walk-foot">
-      <span class="walk-foot-note">Reference &middot; not part of a story</span>
-      <span class="walk-foot-links">
-        <a class="walk-link walk-link-home" href="#/visitor/home">&larr; Back to the start</a>
-        <a class="walk-link" href="#/visitor/anatomy">Anatomy of a reply &rarr;</a>
-      </span>
+        <div class="panel">
+          <p class="panel-title">Motion and the playfulness</p>
+          <div class="prose"><p>Motion only shows a change of state: 200ms, ease-out, colour and transform only, and it is switched off for anyone who asks their system for less motion. Hover a row on the landing screen and its arrow steps right. Nothing else moves.</p>
+          <p>The playfulness is in the words and in one object, not in decoration. The words are his: the bio stays as he wrote it, the contact screen says out loud what he does not want to hear about. The object is the <b>obi</b>: the red paper band printed with one selling line and wrapped around a Japanese book, fixed here under the masthead on every screen, carrying what he is open to. It is the only saturated surface on the site.</p>
+          <p>What this site turns down: the near-black terminal with acid-green mono, the cream serif résumé, a three-up grid of project cards, a logo cloud of skills, and any anime artwork he does not own.</p></div>
+        </div>
+      </main>
+      <footer class="colophon">
+        <div class="colophon-inner">
+          <p class="colophon-line">Written, drawn and deployed by one person, in Bengaluru.</p>
+          <ul class="links">
+            <li><a href="https://github.com/piyushsingariya"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg> github.com/piyushsingariya</a></li>
+            <li><a href="https://github.com/gear6io"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg> github.com/gear6io</a></li>
+            <li><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></g></svg> LinkedIn <span class="flag">link to confirm</span></span></li>
+            <li><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></g></svg> Email <span class="flag">address to confirm</span></span></li>
+          </ul>
+          <p class="colophon-note">This is a clickable walkthrough, not the site. Nothing sends, downloads or signs anything in. <a href="#/visitor/design">How this site is drawn</a></p>
+        </div>
+      </footer>
     </div>
-  </div>
 </template>

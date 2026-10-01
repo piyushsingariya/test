@@ -1,0 +1,106 @@
+<template data-screen="visitor/work" data-title="Work">
+    <div class="site">
+      <header class="masthead">
+        <div class="masthead-inner">
+          <a class="wordmark" href="#/visitor/home">Piyush Singariya</a>
+          <nav class="nav" aria-label="Sections">
+            <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
+            <a class="nav-link" href="#/visitor/writing">Writing</a>
+            <a class="nav-link" href="#/visitor/cv">CV</a>
+          </nav>
+          <a class="btn btn-ink" href="#/visitor/contact"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg> Get in touch</a>
+        </div>
+      </header>
+      <div class="obi">
+        <div class="obi-inner">
+          <span class="obi-label">Open to</span>
+          <p class="obi-value">Senior backend and infrastructure roles, contract work on storage and observability, and an argument about query planners whenever one is going.</p>
+          <span class="flag flag-on-accent">Sample wording: Piyush to confirm</span>
+        </div>
+      </div>
+                  <main class="page">
+        <h1 class="section-title">The work</h1>
+        <p class="lede">Four separate bodies of work, kept apart on purpose: the day job, the system he designed, the open-source one, and the one he started himself. Each says what the problem was, what he did with his own hands, what his team shipped around him, and where a stranger can go and check.</p>
+        <p class="note">Every line on this page is sample wording standing in for his. Anything that came off the internet rather than out of his mouth is flagged until he confirms it, and none of it becomes site copy before then.</p>
+        <div class="arcs">
+          <article class="arc">
+            <div class="arc-rail" aria-hidden="true"><span class="arc-node"></span><span class="arc-line"></span></div>
+            <div class="arc-body">
+              <h2 class="arc-title">The day job &mdash; SigNoz, observability built on OpenTelemetry</h2>
+              <p class="arc-lead">Backend engineer on the road a span travels: out of an SDK, through a collector, into a column store, and back out as the query someone on-call runs at 3am.</p>
+              <p class="arc-where">Software engineer, SigNoz, Bengaluru. <span class="source">From his GitHub.</span></p>
+              <dl class="parts">
+                <div class="part"><dt>The problem</dt><dd>Observability is sold by the gigabyte, so the honest version of the job is an argument about what you keep, how it is laid out on disk, and how fast you can ask it anything.</dd></div>
+                <div class="part part-mine"><dt>What I did</dt><dd>The line this whole site exists for, and it has to be his: which components he owns, which changes he shipped, what he would defend in a review. <span class="flag">His words needed</span></dd></div>
+                <div class="part"><dt>What the team shipped</dt><dd>SigNoz is a product with a team and an open-source community around it. Whatever is theirs is named here as theirs, so the line above can be believed.</dd></div>
+                <div class="part"><dt>What came of it</dt><dd>An outcome he can point at, and no number he cannot source. <span class="flag">His words needed</span></dd></div>
+                <div class="part"><dt>Proof</dt><dd><ul class="proof"><li><a href="https://github.com/SigNoz/signoz">github.com/SigNoz/signoz</a> <span class="source">the project he works on, in the open</span></li><li><span class="link-todo">his merged changes</span> <span class="flag">list needed from him</span></li></ul></dd></div>
+              </dl>
+              <p class="tools"><b>Reached for here:</b> Go, ClickHouse and OpenTelemetry, if the search results are right about him. <span class="flag">unconfirmed: his list, per piece of work</span></p>
+            </div>
+          </article>
+          <article class="arc">
+            <div class="arc-rail" aria-hidden="true"><span class="arc-node"></span><span class="arc-line"></span></div>
+            <div class="arc-body">
+              <h2 class="arc-title">The system he designed &mdash; Gear5 at Datazip, which became the base of OLake</h2>
+              <p class="arc-lead">Tech lead on a data platform, where he designed the ingestion engine the product was later rebuilt on. <span class="flag">from a LinkedIn summary, not from him</span></p>
+              <p class="arc-where">Tech lead, Datazip. <span class="flag">dates to confirm</span></p>
+              <dl class="parts">
+                <div class="part"><dt>The problem</dt><dd>Getting change out of operational databases into a lake, continuously, without the pipeline becoming the thing that breaks at 2am.</dd></div>
+                <div class="part part-mine"><dt>What I did</dt><dd>Designed Gear5: the architecture, and the calls on what it would and would not do. <span class="flag">unconfirmed</span></dd></div>
+                <div class="part"><dt>What the team shipped</dt><dd>OLake is a product with a team behind it: connectors, releases, docs, users. He designed the engine underneath, which is a different claim from having built the product, and this site will not let the two blur.</dd></div>
+                <div class="part"><dt>What came of it</dt><dd>The design outlived its first name: Gear5 became the base of OLake. <span class="flag">unconfirmed</span></dd></div>
+                <div class="part"><dt>Proof</dt><dd><ul class="proof"><li><span class="link-todo">the OLake repository</span> <span class="flag">link to confirm</span></li><li><span class="link-todo">a design doc, a post or a talk</span> <span class="flag">needed. If Gear5 is closed, this says what a stranger can see instead</span></li></ul></dd></div>
+              </dl>
+              <p class="tools"><b>Reached for here:</b> Named once he confirms it. This line only ever lists what this one system used. <span class="flag">his list needed</span></p>
+            </div>
+          </article>
+          <article class="arc">
+            <div class="arc-rail" aria-hidden="true"><span class="arc-node"></span><span class="arc-line"></span></div>
+            <div class="arc-body">
+              <h2 class="arc-title">The open-source one &mdash; Meshery&rsquo;s command line, with Layer5</h2>
+              <p class="arc-lead">Google Summer of Code 2021 with Layer5, then a maintainer of mesheryctl: the part of Meshery a user actually types into.</p>
+              <p class="arc-where">Maintainer, meshery/meshery. Meshery is pinned on his GitHub. <span class="source">From his GitHub.</span></p>
+              <dl class="parts">
+                <div class="part"><dt>The problem</dt><dd>Meshery is a large project and its CLI is the first thing a new user meets. A thin, untested command line makes the whole project feel thin.</dd></div>
+                <div class="part part-mine"><dt>What I did</dt><dd>Took mesheryctl on during GSoC 2021 and stayed with it as a maintainer: the tests it did not have, and reviews on other people&rsquo;s CLI changes.</dd></div>
+                <div class="part"><dt>What the team shipped</dt><dd>Meshery itself, its server, adapters, UI and docs, is the Layer5 community&rsquo;s work, dozens of contributors over years. He did not build Meshery. He maintained the part you type into.</dd></div>
+                <div class="part"><dt>What came of it</dt><dd>A CLI with tests under it, which makes changing it boring. Coverage went from near-nothing to <span class="flag">his number, with something to point at</span>.</dd></div>
+                <div class="part"><dt>Proof</dt><dd><ul class="proof"><li><a href="https://github.com/meshery/meshery">github.com/meshery/meshery</a> <span class="source">the project, and its CLI</span></li><li><span class="link-todo">his merged pull requests</span> <span class="flag">the list he wants shown</span></li><li><span class="link-todo">the GSoC 2021 project page</span> <span class="flag">link to confirm</span></li></ul></dd></div>
+              </dl>
+              <p class="tools"><b>Reached for here:</b> Go, Kubernetes, and the tooling the CLI&rsquo;s tests run under. <span class="flag">sample: his list to confirm</span></p>
+              <p class="arc-more"><a class="btn btn-quiet btn-sm" href="#/visitor/work-meshery">Read the long version <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a></p>
+            </div>
+          </article>
+          <article class="arc">
+            <div class="arc-rail" aria-hidden="true"><span class="arc-node"></span><span class="arc-line"></span></div>
+            <div class="arc-body">
+              <h2 class="arc-title">The one he started himself &mdash; gear6io</h2>
+              <p class="arc-lead">His own venture, built in the open. <span class="flag">what it is, in his words</span></p>
+              <p class="arc-where">github.com/gear6io. <span class="source">From his GitHub.</span></p>
+              <dl class="parts">
+                <div class="part"><dt>The problem</dt><dd>What it is for, and what was wrong with the alternatives. <span class="flag">His words needed</span></dd></div>
+                <div class="part part-mine"><dt>What I did</dt><dd>All of it, which here means the design calls as much as the code. <span class="flag">His words needed</span></dd></div>
+                <div class="part"><dt>What the team shipped</dt><dd>Nobody else, yet, and this page says so plainly rather than writing &ldquo;we&rdquo; and implying a company that does not exist.</dd></div>
+                <div class="part"><dt>What came of it</dt><dd>Where it has got to, dated, so a visitor can see how fresh it is. <span class="flag">His words needed</span></dd></div>
+                <div class="part"><dt>Proof</dt><dd><ul class="proof"><li><a href="https://github.com/gear6io">github.com/gear6io</a> <span class="source">the org, public</span></li></ul></dd></div>
+              </dl>
+              <p class="tools"><b>Reached for here:</b> Whatever it is built on, once he says. <span class="flag">his list needed</span></p>
+            </div>
+          </article>
+        </div>
+      </main>
+      <footer class="colophon">
+        <div class="colophon-inner">
+          <p class="colophon-line">Written, drawn and deployed by one person, in Bengaluru.</p>
+          <ul class="links">
+            <li><a href="https://github.com/piyushsingariya"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg> github.com/piyushsingariya</a></li>
+            <li><a href="https://github.com/gear6io"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></g></svg> github.com/gear6io</a></li>
+            <li><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></g></svg> LinkedIn <span class="flag">link to confirm</span></span></li>
+            <li><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></g></svg> Email <span class="flag">address to confirm</span></span></li>
+          </ul>
+          <p class="colophon-note">This is a clickable walkthrough, not the site. Nothing sends, downloads or signs anything in. <a href="#/visitor/design">How this site is drawn</a></p>
+        </div>
+      </footer>
+    </div>
+</template>
