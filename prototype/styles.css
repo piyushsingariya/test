@@ -389,20 +389,20 @@ a { color: var(--color-accent-text); text-underline-offset: 0.2em; }
 
 .panel-title { margin: 0 0 var(--space-3); font-size: var(--font-size-md); font-weight: var(--font-weight-bold); line-height: var(--font-leading-snug); }
 
-.prose { max-width: 60ch; }
+.prose { max-width: 52ch; }
 .prose p { margin: 0 0 var(--space-4); }
 .prose p:last-child { margin-bottom: 0; }
 
 /* The flag: how the prototype admits a thing is not his yet */
 .flag {
   display: inline-block;
-  padding: 0 var(--space-2);
+  padding: var(--space-1) var(--space-2);
   border: 1px solid var(--color-accent);
   color: var(--color-accent-text);
   background: var(--color-bg);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  line-height: 1.6;
+  line-height: var(--font-leading-snug);
   white-space: nowrap;
 }
 
@@ -578,6 +578,100 @@ a { color: var(--color-accent-text); text-underline-offset: 0.2em; }
 .r-10 { width: var(--space-10); }
 
 /* ------------------------------------------------------------------ *
+ * The work: four bodies of work, in parallel lanes
+ * ------------------------------------------------------------------ */
+
+.note {
+  margin: 0 0 var(--space-9);
+  padding: var(--space-4) var(--space-5);
+  border: 2px solid var(--color-border-strong);
+  background: var(--color-surface-2);
+  max-width: 50ch;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-leading-snug);
+}
+
+.arc { display: flex; gap: var(--space-5); }
+.arc + .arc { margin-top: var(--space-9); }
+
+.arc-rail {
+  flex: 0 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--space-6);
+}
+
+.arc-node { width: var(--space-4); height: var(--space-4); background: var(--color-border-strong); flex: 0 0 auto; }
+.arc-line { width: 2px; flex: 1 1 auto; margin-top: var(--space-2); background: var(--color-border-strong); }
+.arc:last-child .arc-line { display: none; }
+
+.arc-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 2px solid var(--color-border-strong);
+  background: var(--color-surface);
+  padding: var(--space-6);
+}
+
+.arc-title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.arc-lead { margin: 0 0 var(--space-3); max-width: 56ch; font-size: var(--font-size-md); line-height: var(--font-leading-snug); }
+.arc-where { margin: 0; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+
+.parts { margin: var(--space-6) 0 0; }
+.part { margin: 0 0 var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.part:last-child { margin-bottom: 0; }
+.part dt { margin: 0 0 var(--space-1); font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); }
+.part dd { margin: 0; max-width: 62ch; }
+.part-mine { border-top-color: var(--color-accent); }
+.part-mine dt { color: var(--color-accent-text); }
+
+.proof { list-style: none; margin: 0; padding: 0; }
+.proof li { padding: var(--space-2) 0; max-width: 48ch; }
+.proof li:first-child { padding-top: 0; }
+.proof a, .proof .link-todo { font-family: var(--font-mono); font-size: var(--font-size-sm); overflow-wrap: anywhere; }
+.proof a { color: var(--color-text); text-decoration-color: var(--color-border); }
+.proof a:hover { color: var(--color-accent-text); }
+
+.tools { margin: var(--space-6) 0 0; padding-top: var(--space-4); border-top: 1px solid var(--color-border); max-width: 54ch; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.tools b { color: var(--color-text); }
+
+.arc-more { margin: var(--space-6) 0 0; }
+
+/* The landing's preview of the four */
+.arcs-brief { margin-top: var(--space-11); }
+.brief { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--color-border-strong); }
+.brief li { border-bottom: 1px solid var(--color-border); }
+
+.brief a {
+  display: block;
+  padding: var(--space-4) var(--space-2);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.brief a:hover { background: var(--color-surface); }
+.brief a:hover b { color: var(--color-accent-text); }
+.brief b { display: block; font-weight: var(--font-weight-bold); }
+.brief span { color: var(--color-text-muted); }
+
+/* A work detail page */
+.detail-back { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-sm); color: var(--color-text); text-decoration-color: var(--color-border); }
+.detail-back:hover { color: var(--color-accent-text); }
+.split-two { display: flex; gap: var(--space-7); flex-wrap: wrap; margin-top: var(--space-7); }
+.split-two > * { flex: 1 1 24rem; margin-top: 0; }
+.panel-mine .panel-title { color: var(--color-accent-text); }
+.panel + .split-two, .split-two + .panel { margin-top: var(--space-7); }
+
+/* ------------------------------------------------------------------ *
  * Phone
  * ------------------------------------------------------------------ */
 
@@ -627,6 +721,23 @@ a { color: var(--color-accent-text); text-underline-offset: 0.2em; }
 .phone .shape dt { flex: 1 1 auto; }
 .phone .btn { width: 100%; justify-content: center; }
 .phone .actions { flex-direction: column; gap: var(--space-3); }
+
+.phone .arc { gap: 0; }
+.phone .arc-rail { display: none; }
+.phone .arc + .arc { margin-top: var(--space-7); }
+.phone .arc-body { padding: var(--space-5); }
+.phone .arc-title { font-size: var(--font-size-md); font-family: var(--font-display); }
+.phone .arc-lead { font-size: var(--font-size-base); }
+.phone .note { margin-bottom: var(--space-7); padding: var(--space-4); }
+.phone .arcs-brief { margin-top: var(--space-9); }
+.phone .brief a { padding: var(--space-4) 0; min-height: 2.75rem; }
+.phone .split-two { gap: var(--space-6); margin-top: var(--space-6); }
+.phone .split-two > * { flex: 1 1 100%; }
+.phone .panel + .split-two, .phone .split-two + .panel { margin-top: var(--space-6); }
+.phone .arc-more .btn { width: 100%; justify-content: center; }
+.phone .btn-sm { min-height: 2.75rem; }
+.phone .detail-back { min-height: 2.75rem; }
+.phone .flag { white-space: normal; }
 
 .tabbar {
   display: flex;

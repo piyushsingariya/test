@@ -50,6 +50,10 @@ a shadow — with one exception, the portrait on the landing screen, which has a
 shadow and no border, the way a photo is tipped onto a page. Density regular: tight inside a
 panel, `--space-10` between panels.
 
+The work screens borrow one of the notations: a `git log --graph` lane down the left of the four
+bodies of work, a 2px ink rule with a filled node at each one, so four parallel things read as four
+and not as one career. Repo paths and short SHAs are set in M PLUS 1 Code.
+
 Layout is one column of panels, not a grid of cards. Desktop: a masthead, the obi under it, a
 68rem column, the credit block at the foot. Phone: the same column full-bleed, a five-tab bar at
 the foot of the document, with the obi and a mail button at the head, so contact and availability
