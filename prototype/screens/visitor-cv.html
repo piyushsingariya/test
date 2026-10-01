@@ -1,4 +1,4 @@
-<template data-screen="visitor/home" data-title="Landing">
+<template data-screen="visitor/cv" data-title="CV">
     <div class="site">
       <header class="masthead">
         <div class="masthead-inner">
@@ -6,7 +6,7 @@
           <nav class="nav" aria-label="Sections">
             <a class="nav-link" href="#/visitor/work">Work</a>
             <a class="nav-link" href="#/visitor/writing">Writing</a>
-            <a class="nav-link" href="#/visitor/cv">CV</a>
+            <a class="nav-link" href="#/visitor/cv" aria-current="page">CV</a>
           </nav>
           <a class="btn btn-ink" href="#/visitor/contact"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg> Get in touch</a>
         </div>
@@ -19,29 +19,28 @@
         </div>
       </div>
       <main class="page">
-        <section class="hero">
-          <div class="hero-text">
-            <h1 class="cover">Piyush<br>Singariya</h1>
-            <p class="hero-line">Backend and infrastructure engineer. Storage engines, the query paths that run over them, and the telemetry that proves any of it works. <span class="flag">Sample wording: Piyush to confirm</span></p>
-            <p class="hero-bio">“Either pushing commits with errors or watching Anime.” <span class="source">His GitHub bio, his own words.</span></p>
-            <div class="actions">
-              <a class="btn btn-ink" href="#/visitor/work">See the work <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-              <a class="btn btn-quiet" href="#/visitor/contact">Get in touch</a>
+        <h1 class="section-title">CV</h1>
+        <p class="lede">One page, on the site. Nobody has to email him to ask for it.</p>
+        <div class="split">
+          <div class="sheet tone">
+            <div class="sheet-rule"></div>
+            <div class="sheet-line"></div>
+            <div class="sheet-line sheet-line-short"></div>
+            <div class="sheet-rule"></div>
+            <div class="sheet-line"></div>
+            <div class="sheet-line"></div>
+            <div class="sheet-line sheet-line-short"></div>
+            <p class="sheet-note">Placeholder sheet. The real one page is set in a later step, from facts Piyush confirms.</p>
+          </div>
+          <div>
+            <div class="panel">
+              <p class="panel-title">Take it with you</p>
+              <div class="prose"><p>The same page as a PDF, for the applicant-tracking system that will mangle it anyway.</p></div>
+              <p><span class="btn btn-dead btn-sm"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10 9H8m8 4H8m8 4H8"/></g></svg> Download the PDF</span></p>
+              <p class="colophon-note">Nothing downloads in the walkthrough. This button is here so you can say where it should sit.</p>
             </div>
           </div>
-          <figure class="portrait">
-            <div class="portrait-box tone">
-              <p class="portrait-label">A photo of Piyush goes here. 4:5, one he owns.</p>
-            </div>
-            <figcaption>Placeholder. No stock photo of a stranger stands in for him.</figcaption>
-          </figure>
-        </section>
-        <nav class="contents" aria-label="What is on this site">
-          <a class="contents-row" href="#/visitor/work"><span class="contents-name">Work</span><span class="contents-what">Four bodies of work, and what he personally did on each.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/writing"><span class="contents-name">Writing</span><span class="contents-what">Posts and notes, each on its own page, newest first.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/cv"><span class="contents-name">CV</span><span class="contents-what">One page, no form to fill in, no asking him for it.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/contact"><span class="contents-name">Contact</span><span class="contents-what">One way to reach him, and what he wants to talk about.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-        </nav>
+        </div>
       </main>
       <footer class="colophon">
         <div class="colophon-inner">

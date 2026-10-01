@@ -1,10 +1,10 @@
-<template data-screen="visitor/home" data-title="Landing">
+<template data-screen="visitor/work" data-title="Work">
     <div class="site">
       <header class="masthead">
         <div class="masthead-inner">
           <a class="wordmark" href="#/visitor/home">Piyush Singariya</a>
           <nav class="nav" aria-label="Sections">
-            <a class="nav-link" href="#/visitor/work">Work</a>
+            <a class="nav-link" href="#/visitor/work" aria-current="page">Work</a>
             <a class="nav-link" href="#/visitor/writing">Writing</a>
             <a class="nav-link" href="#/visitor/cv">CV</a>
           </nav>
@@ -19,29 +19,24 @@
         </div>
       </div>
       <main class="page">
-        <section class="hero">
-          <div class="hero-text">
-            <h1 class="cover">Piyush<br>Singariya</h1>
-            <p class="hero-line">Backend and infrastructure engineer. Storage engines, the query paths that run over them, and the telemetry that proves any of it works. <span class="flag">Sample wording: Piyush to confirm</span></p>
-            <p class="hero-bio">“Either pushing commits with errors or watching Anime.” <span class="source">His GitHub bio, his own words.</span></p>
-            <div class="actions">
-              <a class="btn btn-ink" href="#/visitor/work">See the work <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-              <a class="btn btn-quiet" href="#/visitor/contact">Get in touch</a>
-            </div>
-          </div>
-          <figure class="portrait">
-            <div class="portrait-box tone">
-              <p class="portrait-label">A photo of Piyush goes here. 4:5, one he owns.</p>
-            </div>
-            <figcaption>Placeholder. No stock photo of a stranger stands in for him.</figcaption>
-          </figure>
-        </section>
-        <nav class="contents" aria-label="What is on this site">
-          <a class="contents-row" href="#/visitor/work"><span class="contents-name">Work</span><span class="contents-what">Four bodies of work, and what he personally did on each.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/writing"><span class="contents-name">Writing</span><span class="contents-what">Posts and notes, each on its own page, newest first.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/cv"><span class="contents-name">CV</span><span class="contents-what">One page, no form to fill in, no asking him for it.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-          <a class="contents-row" href="#/visitor/contact"><span class="contents-name">Contact</span><span class="contents-what">One way to reach him, and what he wants to talk about.</span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg></a>
-        </nav>
+        <h1 class="section-title">The work</h1>
+        <p class="lede">Four separate bodies of work, not one career blob. Each one says what the problem was, what he personally did, what came of it, and where a stranger can check.</p>
+        <div class="placeholder">
+          <p class="placeholder-label">Placeholder: the four entries land here</p>
+          <ul class="stack">
+            <li>His current role<span>What he works on now.</span></li>
+            <li>Systems he designed and led<span>At previous employers.</span></li>
+            <li>Open-source maintainership<span>What he maintains, and for whom.</span></li>
+            <li>His own venture<span>The thing he started himself.</span></li>
+          </ul>
+          <dl class="shape">
+            <div><dt>The problem</dt><dd>What was actually hard, in a paragraph.</dd></div>
+            <div><dt>What I did</dt><dd>His own hands, named. The one line this site exists for.</dd></div>
+            <div><dt>What the team did</dt><dd>Kept separate on purpose, so the first line can be believed.</dd></div>
+            <div><dt>What came of it</dt><dd>The outcome, with no invented numbers.</dd></div>
+            <div><dt>Proof</dt><dd>A repo, a merged change, a published post or a talk.</dd></div>
+          </dl>
+        </div>
       </main>
       <footer class="colophon">
         <div class="colophon-inner">

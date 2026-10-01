@@ -3,28 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vendi — prototype walkthrough</title>
+    <title>Piyush Singariya — prototype walkthrough</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="shell">
       <aside class="shell-rail">
-        <a class="brand" href="#/visitor/home">
-          <span class="brand-mark" aria-hidden="true">V</span>
-          <span>
-            <span class="brand-name">Vendi</span><br>
-            <span class="brand-sub">Back to the start</span>
-          </span>
+        <a class="shell-brand" href="#/visitor/home">Piyush Singariya
+          <span class="shell-brand-sub">Prototype walkthrough</span>
         </a>
 
-        <p class="prototype-note">A clickable walkthrough, not the app. Nothing here connects to Slack or Notion, and every answer, summary and source is made up for the walkthrough.</p>
+        <p class="shell-note">A clickable walkthrough, not the site. Nothing sends, downloads or signs
+          anything in, and every line still marked as sample is waiting on Piyush to confirm it.</p>
 
         <nav id="index" aria-label="Screens"></nav>
       </aside>
 
       <main class="shell-main">
         <div class="shell-bar">
-          <span class="shell-bar-title" id="screen-title">Vendi</span>
+          <span class="shell-bar-title" id="screen-title">Piyush Singariya</span>
           <span class="shell-bar-persona" id="screen-persona"></span>
         </div>
         <div class="stage" id="stage" data-platform="desktop">
@@ -38,33 +35,21 @@
 
       var ORDER = [
         "visitor/home",
-        "employee/ask",
-        "employee/thread",
-        "employee/summary",
-        "employee/shorter",
-        "employee/topic",
-        "employee/no-answer",
-        "employee/dm",
-        "owner/proposal",
-        "owner/accepted",
-        "owner/declined",
-        "owner/stale",
-        "admin/install",
-        "admin/invite",
-        "admin/notion",
-        "admin/channels",
-        "admin/sources",
-        "admin/log",
-        "admin/entry",
-        "visitor/anatomy",
-        "visitor/design"
+        "visitor/work",
+        "visitor/writing",
+        "visitor/cv",
+        "visitor/contact",
+        "visitor/design",
+        "phone/home",
+        "phone/work",
+        "phone/writing",
+        "phone/cv",
+        "phone/contact"
       ];
 
       var PERSONAS = {
-        visitor: { label: "Visitor", platform: "desktop" },
-        employee: { label: "Employee", platform: "desktop" },
-        owner: { label: "Page owner", platform: "desktop" },
-        admin: { label: "Admin", platform: "desktop" }
+        visitor: { label: "Visitor — desktop", platform: "desktop" },
+        phone: { label: "Visitor — phone", platform: "mobile" }
       };
 
       var templates = Array.prototype.slice.call(
@@ -110,15 +95,11 @@
         }
 
         var order = Object.keys(PERSONAS).filter(function (id) {
-          return screens.some(function (screen) {
-            return screen.persona === id;
-          });
+          return screens.some(function (screen) { return screen.persona === id; });
         });
 
         screens.forEach(function (screen) {
-          if (order.indexOf(screen.persona) === -1) {
-            order.push(screen.persona);
-          }
+          if (order.indexOf(screen.persona) === -1) { order.push(screen.persona); }
         });
 
         order.forEach(function (id) {
@@ -134,9 +115,7 @@
           list.className = "index-list";
 
           screens
-            .filter(function (screen) {
-              return screen.persona === id;
-            })
+            .filter(function (screen) { return screen.persona === id; })
             .forEach(function (screen) {
               var item = document.createElement("li");
               var link = document.createElement("a");
@@ -159,9 +138,7 @@
       }
 
       function show() {
-        if (!screens.length) {
-          return;
-        }
+        if (!screens.length) { return; }
 
         var screen = byRoute[routeFromHash()] || byRoute[START] || screens[0];
         var persona = personaOf(screen.persona);
@@ -170,7 +147,7 @@
         stage.setAttribute("data-platform", persona.platform);
         titleEl.textContent = screen.title;
         personaEl.textContent = persona.label;
-        document.title = "Vendi — " + screen.title;
+        document.title = "Piyush Singariya — " + screen.title;
         stage.scrollTop = 0;
         window.scrollTo(0, 0);
 
@@ -187,19 +164,11 @@
       }
 
       screens.sort(function (a, b) {
-        var order = Object.keys(PERSONAS);
-        var pa = order.indexOf(a.persona);
-        var pb = order.indexOf(b.persona);
-        if (pa === -1) { pa = order.length; }
-        if (pb === -1) { pb = order.length; }
-        if (pa !== pb) { return pa - pb; }
         var oa = ORDER.indexOf(a.route);
         var ob = ORDER.indexOf(b.route);
         if (oa === -1) { oa = ORDER.length; }
         if (ob === -1) { ob = ORDER.length; }
         if (oa !== ob) { return oa - ob; }
-        if (a.route === START) { return -1; }
-        if (b.route === START) { return 1; }
         return a.route < b.route ? -1 : a.route > b.route ? 1 : 0;
       });
 
