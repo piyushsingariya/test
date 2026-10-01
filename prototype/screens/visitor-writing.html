@@ -20,12 +20,51 @@
       </div>
       <main class="page">
         <h1 class="section-title">Writing</h1>
-        <p class="lede">Posts live here as pages of their own, each one readable alone and linkable alone, newest first. He publishes by editing the source and pushing.</p>
-        <div class="empty">
-          <p class="empty-title">Nothing published in the walkthrough yet.</p>
-          <p>This is the empty state, on purpose: it is what the section looks like the day the site goes up, before the first post. Each post will be a title, a date, and the text.</p>
-          <p><span class="flag">Posts land here in a later step</span></p>
-        </div>
+        <p class="lede">Posts and notes live here as pages of their own: each one readable alone, each one with a link of its own. Newest first.</p>
+        <section class="now">
+          <div class="now-head">
+            <h2 class="now-title">Right now</h2>
+            <span class="now-when"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 2v3m8-3v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg> Dated 1 Oct 2026</span>
+          </div>
+          <ul class="now-list">
+            <li><b>Building</b> gear6io, in the open, on the weekends that survive the week.</li>
+            <li><b>Reading</b> other people&rsquo;s storage-engine commits, mostly for the comments.</li>
+            <li><b>Arguing about</b> whether a trace should ever cost more than the request it describes.</li>
+          </ul>
+          <p class="now-foot">Dated on purpose, so you can see when it went stale instead of guessing. <span class="flag">Sample wording: Piyush to confirm</span></p>
+        </section>
+        <section>
+          <h2 class="section-title">Posts and notes</h2>
+          <p class="note">Sample titles, dates and words standing in for his. The walkthrough has one post written out, so every row below opens that one.</p>
+          <ul class="posts">
+            <li><a href="#/visitor/post"><span class="post-when">14 Sep 2026 &middot; <i>Post</i></span><span class="post-said"><span class="post-name">The span that spent 400&nbsp;ms describing itself</span><span class="post-what">A 400&nbsp;ms hole in a trace, and the database was innocent. We were not.</span></span></a></li>
+            <li><a href="#/visitor/post"><span class="post-when">02 Aug 2026 &middot; <i>Note</i></span><span class="post-said"><span class="post-name">Three things I had wrong about columnar compression</span><span class="post-what">Short one. The ratio you quote in the deck is doing none of the work you think it is.</span></span></a></li>
+            <li><a href="#/visitor/post"><span class="post-when">20 May 2026 &middot; <i>Post</i></span><span class="post-said"><span class="post-name">A CLI is a user interface, and yours is rude</span><span class="post-what">What maintaining the part people type into taught me about error messages.</span></span></a></li>
+            <li><a href="#/visitor/post"><span class="post-when">11 Feb 2026 &middot; <i>Note</i></span><span class="post-said"><span class="post-name">Reading a Parquet footer by hand</span><span class="post-what">No tooling, one hex dump, and a new respect for footer offsets.</span></span></a></li>
+          </ul>
+          <div class="placeholder day-one">
+            <p class="placeholder-label">Day one, before the first post</p>
+            <p class="day-one-line">Nothing published yet. He is writing one.</p>
+            <p class="day-one-note">What the list shows the day the site goes up: one line, no apology, and no archive imported from somewhere else to look busy.</p>
+          </div>
+        </section>
+        <section class="talks-section">
+          <h2 class="section-title">Talks and community</h2>
+          <p class="lede">Things he was asked to do, each with somewhere to go and check. Nothing appears here without a link.</p>
+          <ul class="talks">
+            <li>
+              <span class="talk-name">Google Summer of Code 2021 &mdash; Meshery&rsquo;s CLI, with Layer5</span>
+              <span class="talk-where">A summer on the part of Meshery people type into, which turned into maintaining it. <span class="source">His GitHub says GSoC&rsquo;21 with Layer5.</span></span>
+              <p class="talk-out"><a href="https://github.com/meshery/meshery"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> github.com/meshery/meshery</a> <span class="link-todo">the project page <span class="flag">link to confirm</span></span></p>
+            </li>
+            <li>
+              <span class="talk-name">A talk, a community call, a podcast <span class="flag">his list needed</span></span>
+              <span class="talk-where">If he spoke, ran a workshop or was asked on, it belongs here with the recording beside it.</span>
+              <p class="talk-out"><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 19v3m7-12v2a7 7 0 0 1-14 0v-2"/><rect width="6" height="13" x="9" y="2" rx="3"/></g></svg> a recording or an event page <span class="flag">nothing lands here without one</span></span></p>
+            </li>
+          </ul>
+          <p class="colophon-note">An empty list is fine. An invented talk is not.</p>
+        </section>
       </main>
       <footer class="colophon">
         <div class="colophon-inner">

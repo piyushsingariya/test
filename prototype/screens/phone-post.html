@@ -1,4 +1,4 @@
-<template data-screen="phone/writing" data-title="Writing">
+<template data-screen="phone/post" data-title="A post">
     <div class="site phone">
       <div class="phone-statusbar"></div>
       <header class="phone-top">
@@ -13,51 +13,50 @@
         </div>
       </div>
       <main class="phone-page">
-        <h1 class="phone-title">Writing</h1>
-        <p class="lede">Posts and notes live here as pages of their own: each one readable alone, each one with a link of its own. Newest first.</p>
-        <section class="now">
-          <div class="now-head">
-            <h2 class="now-title">Right now</h2>
-            <span class="now-when"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 2v3m8-3v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg> Dated 1 Oct 2026</span>
+        <p><a class="detail-back" href="#/phone/writing"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 19l-7-7l7-7m7 7H5"/></svg> All writing</a></p>
+        <article class="article">
+          <header class="article-head">
+            <p><span class="flag">Sample post, written to show how one reads. His words replace it.</span></p>
+            <h1 class="article-title">The span that spent 400&nbsp;ms describing itself</h1>
+            <p class="article-meta"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M8 2v3m8-3v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/></g></svg> 14 Sep 2026</span><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></svg> 6 min</span><span>Post</span></p>
+            <p class="article-lead">Someone pasted a trace into the on-call channel with a 400&nbsp;ms hole in it and asked which database was slow. No database was slow. The hole was us, writing down how fast we were.</p>
+          </header>
+          <div class="article-body">
+            <h2>What the waterfall actually showed</h2>
+            <p>Six spans, one of them not part of the request at all:</p>
+            <pre class="waterfall">GET /checkout                  612 ms
+&#9500;&#9472; auth.verify                   4 ms
+&#9500;&#9472; cart.load                    21 ms
+<b>&#9500;&#9472; otel.export (batch flush)   402 ms  &#8592; this one</b>
+&#9492;&#9472; db.query                     18 ms</pre>
+            <p>The exporter was flushing on the request thread. Worse, every span carried about 180 attributes, one of which was the whole request body, stringified, because six months earlier that was the fastest way to debug something nobody remembers now.</p>
+            <h2>The boring fix</h2>
+            <ul>
+              <li>Drop the attribute. It was a debugging note from a previous era, kept because deleting things feels like losing them.</li>
+              <li>Cap the batch and let the exporter flush on its own thread, where it is free to be slow in private.</li>
+              <li>Give it a budget: if telemetry costs more than one percent of the request, telemetry is the bug.</li>
+            </ul>
+            <p>Request time went back to 210&nbsp;ms. Nothing about the application changed. We just stopped narrating it quite so enthusiastically.</p>
+            <blockquote class="article-pull">
+              <p>Observability is the only part of your system allowed to be slow and still call itself helpful. Don&rsquo;t let it.</p>
+            </blockquote>
+            <h2>What I would do differently</h2>
+            <p>Measure the measuring first. A span is a write, a batch is a buffer, and an exporter on the hot path is a queue you did not design. The <a href="https://opentelemetry.io/docs/">batch processor&rsquo;s own documentation</a> says most of this, which I read afterwards, in the traditional order.</p>
+            <p>Ten minutes in a flamegraph, one line of <code>config.yaml</code>. Not every arc needs a training montage.</p>
           </div>
-          <ul class="now-list">
-            <li><b>Building</b> gear6io, in the open, on the weekends that survive the week.</li>
-            <li><b>Reading</b> other people&rsquo;s storage-engine commits, mostly for the comments.</li>
-            <li><b>Arguing about</b> whether a trace should ever cost more than the request it describes.</li>
-          </ul>
-          <p class="now-foot">Dated on purpose, so you can see when it went stale instead of guessing. <span class="flag">Sample wording: Piyush to confirm</span></p>
-        </section>
-        <section>
-          <h2 class="phone-title">Posts and notes</h2>
-          <p class="note">Sample titles, dates and words standing in for his. The walkthrough has one post written out, so every row below opens that one.</p>
+          <div class="article-foot">
+            <p class="article-foot-line">Written by Piyush, in Bengaluru. There is no comments box here on purpose &mdash; if this is wrong, tell him so directly.</p>
+            <div class="actions">
+              <a class="btn btn-ink" href="#/phone/contact"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></svg> Tell him he&rsquo;s wrong</a>
+              <a class="btn btn-quiet" href="#/phone/writing"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 19l-7-7l7-7m7 7H5"/></svg> All writing</a>
+            </div>
+          </div>
+        </article>
+        <section class="next">
+          <p class="next-label">Next in the volume</p>
           <ul class="posts">
-            <li><a href="#/phone/post"><span class="post-when">14 Sep 2026 &middot; <i>Post</i></span><span class="post-said"><span class="post-name">The span that spent 400&nbsp;ms describing itself</span><span class="post-what">A 400&nbsp;ms hole in a trace, and the database was innocent. We were not.</span></span></a></li>
-            <li><a href="#/phone/post"><span class="post-when">02 Aug 2026 &middot; <i>Note</i></span><span class="post-said"><span class="post-name">Three things I had wrong about columnar compression</span><span class="post-what">Short one. The ratio you quote in the deck is doing none of the work you think it is.</span></span></a></li>
             <li><a href="#/phone/post"><span class="post-when">20 May 2026 &middot; <i>Post</i></span><span class="post-said"><span class="post-name">A CLI is a user interface, and yours is rude</span><span class="post-what">What maintaining the part people type into taught me about error messages.</span></span></a></li>
-            <li><a href="#/phone/post"><span class="post-when">11 Feb 2026 &middot; <i>Note</i></span><span class="post-said"><span class="post-name">Reading a Parquet footer by hand</span><span class="post-what">No tooling, one hex dump, and a new respect for footer offsets.</span></span></a></li>
           </ul>
-          <div class="placeholder day-one">
-            <p class="placeholder-label">Day one, before the first post</p>
-            <p class="day-one-line">Nothing published yet. He is writing one.</p>
-            <p class="day-one-note">What the list shows the day the site goes up: one line, no apology, and no archive imported from somewhere else to look busy.</p>
-          </div>
-        </section>
-        <section class="talks-section">
-          <h2 class="phone-title">Talks and community</h2>
-          <p class="lede">Things he was asked to do, each with somewhere to go and check. Nothing appears here without a link.</p>
-          <ul class="talks">
-            <li>
-              <span class="talk-name">Google Summer of Code 2021 &mdash; Meshery&rsquo;s CLI, with Layer5</span>
-              <span class="talk-where">A summer on the part of Meshery people type into, which turned into maintaining it. <span class="source">His GitHub says GSoC&rsquo;21 with Layer5.</span></span>
-              <p class="talk-out"><a href="https://github.com/meshery/meshery"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> github.com/meshery/meshery</a> <span class="link-todo">the project page <span class="flag">link to confirm</span></span></p>
-            </li>
-            <li>
-              <span class="talk-name">A talk, a community call, a podcast <span class="flag">his list needed</span></span>
-              <span class="talk-where">If he spoke, ran a workshop or was asked on, it belongs here with the recording beside it.</span>
-              <p class="talk-out"><span class="link-todo"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 19v3m7-12v2a7 7 0 0 1-14 0v-2"/><rect width="6" height="13" x="9" y="2" rx="3"/></g></svg> a recording or an event page <span class="flag">nothing lands here without one</span></span></p>
-            </li>
-          </ul>
-          <p class="colophon-note">An empty list is fine. An invented talk is not.</p>
         </section>
       </main>
       <footer class="colophon">
